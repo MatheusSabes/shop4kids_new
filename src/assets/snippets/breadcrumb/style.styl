@@ -1,0 +1,44 @@
+.breadcrumb
+    padding-bottom 20px
+    border-bottom solid 1px #bebebe
+    margin-bottom 20px
+    &__container 
+        margin: 5px -5px
+
+    &__label, &__sep 
+        display: inline-block 
+        font-family Montserrat
+        font-size 16px
+        font-weight bold
+        font-stretch normal
+        font-style normal
+        line-height normal
+        letter-spacing normal
+        color #211915
+        padding: 5px
+
+    &__item
+        & a
+            font-family Montserrat
+            font-size 16px
+            font-weight 600
+            font-stretch normal
+            font-style normal
+            line-height normal
+            letter-spacing normal
+            color #211915
+            padding: 5px
+            @media screen and (max-width: 992px)
+                font-family Montserrat
+                font-size 11px
+                font-weight 500
+                font-stretch normal
+                font-style normal
+                line-height normal
+                letter-spacing normal
+        &.active
+            & a
+                color #ff6b6b
+                font-weight 400
+        &:last-child 
+           display: none

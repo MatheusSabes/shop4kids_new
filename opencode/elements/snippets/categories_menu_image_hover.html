@@ -1,0 +1,24 @@
+
+{#
+    # Menu de categorias com imagens
+    # elements/snippets/categories_menu_image_hover.html
+    #}
+    <ul class="menu">
+        {% for category in categories %}
+            {% set children = category.children %}
+            <li>
+                <a href="{{ category.link }}">{{ category.name }}</a>
+                {% if children %}
+                    <ul class="menu-children">
+                    {% for child in children %}
+                        <li>
+                            <a href="{{ child.link }}" class="itens">
+                              {{ child.name }}
+                            <img src="{{ child.images[0] }}" class="images"/></a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>

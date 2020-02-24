@@ -1,0 +1,1 @@
+Iserir os svgs nesta pagina sempre com o prefixo icon-

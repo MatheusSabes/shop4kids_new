@@ -1,0 +1,68 @@
+{% if settings.limitProducts %}
+    {% set limitProducts = settings.limitProducts %}
+{% else %}
+    {% set limitProducts = 12 %}
+{% endif %}
+
+{% set showAvailable = settings.show_available_products ? 'available' %}
+
+<section class="page-home__banner page-home__banner--grid">
+    <div class="page-home__container">
+       <div class="page-home__content--1">
+            <div class="page-home__banner-list">
+                <div class="page-home__banner-item"><img src="https://via.placeholder.com/650x355" alt=""></div>
+                <div class="page-home__banner-item"><img src="https://via.placeholder.com/650x355" alt=""></div>
+            </div>
+       </div>
+        <div class="page-home__content--2">
+            <div class="page-home__banner-list">
+                <div class="page-home__banner-item"><img src="https://via.placeholder.com/489x409" alt=""></div>
+                <div class="page-home__banner-item"><img src="https://via.placeholder.com/489x409" alt=""></div>
+                <div class="page-home__banner-item"><img src="https://via.placeholder.com/489x409" alt=""></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+<div class="showcase__carousel">
+
+    {% set products = Products({
+        'categories': settings.showcaseCategory01,
+        'filter': settings.showcaseFilter01,
+        'limit': settings.showcaseQuantity01,
+        'order': settings.showcaseOrder01
+    }) %}
+
+    {% element 'showcase' {
+        "products": products,
+        "showcaseTitle": '<h2 class="showcase__title">' ~  settings.showcaseTitle01  ~ ' <strong>' ~ settings.showcaseDescricao01 ~'</strong> </h2>',
+        "carousel": "true"
+    } %}
+</div>
+
+
+<section class="page-home__banner page-home__banner--grid">
+    <div class="page-home__container">
+       <div class="page-home__content">
+            <div class="page-home__banner-list">
+                <div class="page-home__banner-item"><img src="https://via.placeholder.com/1290x315" alt=""></div>
+            </div>
+       </div>
+        <div class="page-home__content--2">
+            <div class="page-home__banner-list">
+                <div class="page-home__banner-item"><img src="https://via.placeholder.com/629x356" alt=""></div>
+                <div class="page-home__banner-item"><img src="https://via.placeholder.com/629x356" alt=""></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% element 'snippets/banner' {'name': 'bottom'} %}
+
+{% if pages.current == 'page-home' %}
+    {% element 'snippets/banner' {'name': 'popup'} %}
+    {% element 'snippets/banner' {'name': 'floating'} %}
+{% endif %}

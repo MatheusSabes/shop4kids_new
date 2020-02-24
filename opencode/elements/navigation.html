@@ -1,0 +1,14 @@
+<nav class="navigation" id="navigation">
+    <button aria-controls="navigation" type="button" class="navigation__bg"></button>
+    <div class="navigation__container">
+        <button aria-controls="navigation" type="button" class="button button__close button__close--navigation">
+            X
+        </button>
+        <div class="navigation__header">
+            {% element 'snippets/customer' { modifier: 'navigation' } %}
+        </div>
+        <div class="navigation__main">
+            {% element 'snippets/menu' { modifier: 'navigation'} %}
+        </div>
+    </div>
+</nav>

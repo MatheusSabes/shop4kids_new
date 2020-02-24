@@ -1,0 +1,44 @@
+<section id="ProdBlock" class="product__tabs">
+    <div id="ProdAbas" class="abasProduto">
+        <ul class="tabs__list">
+            {% for key, tab in productTabs %}
+            {% if tab.container_id %}
+            <li id="{{ tab.id }}" class="tabs__item{% if key=='description' %} aberta{% endif %}">
+                <a href="#" class="tabs__link" data-tab-container-id="{{ tab.container_id }}"
+                    data-tab-url="{{ tab.url }}">{{ tab.description }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="descricao" class="prodBox product__description">
+        <div class="product__board">{{ product.description ? product.description : product.description_small }}</div>
+    </div>
+
+    <div id="itensInclusos" class="prodBox product__included">
+        <div class="product__board">{{ product.included_items }}</div>
+    </div>
+
+    <div id="coments" class="prodBox product__comments">
+        {% element 'product/comments' %}
+    </div>
+
+    <div id="caracteristicas" class="prodBox product__attributes">
+        <div class='product__board'>
+            {% element 'product/properties' %}
+        </div>
+    </div>
+
+    <div id="garantia" class="prodBox product__warranty">
+        <div class='product__board'>
+            {{ product.warranty }}
+        </div>
+    </div>
+
+    {{ productTabs.custom.content }}
+    {{ productTabs.downloads.content }}
+
+    <div data-app="product.payment-methods" id="formasPagto" class="prodBox product__payments" style="display:none;">
+    </div>
+</section>

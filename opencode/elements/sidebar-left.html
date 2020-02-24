@@ -1,0 +1,20 @@
+<div id="filter" class="page-catalog__left">
+    <div class="page-catalog__filters">
+        <button aria-controls="filter" type="button" class="button button_close button_close--filter">
+            X
+        </button>
+        <div class="page-catalog__filters-scroll">
+            {% if settings.compare %}
+                <a href="/loja/comparador.php?loja={{store.id}}&IdDep={{category.id}}" class="button-compare">{{ Translation("comparar_produto") }}</a>
+            {% endif %}
+            {% element 'filter' {
+                'brands': category.brands
+            } %}
+        </div>
+    </div>
+    <button aria-controls="filter" type="button" class="button button_mask button_mask--filter">Filtrar</button>
+</div>
+
+<button aria-controls="filter" type="button" class="button button__filter">
+    Filtrar
+</button>

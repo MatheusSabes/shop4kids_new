@@ -1,0 +1,221 @@
+.product
+    position relative
+    &__rating
+        display flex
+        justify-content center
+        align-items center
+        margin 8px -2.5px
+        & .rating__stars
+            width: 13px
+            height 13px
+            margin 0 2.5px
+            & svg 
+                width: 100%
+                height 100%
+                & path
+                    fill #FFE99C
+
+    &__variants
+        display flex
+        flex 0 0 100%
+        margin 20px -6.5px 10px -6.5px
+        &--item
+            flex 0 0 39px
+            height 39px
+            border solid 1px #e4e4e4
+            background-color #ffffff
+            border-radius 20px
+            margin 0 6.5px
+            display flex
+            justify-content center
+            align-items center
+            cursor pointer
+            /* Font */
+            font-family Arial
+            font-size 14px
+            font-weight normal
+            font-stretch normal
+            font-style normal
+            line-height 1.2
+            letter-spacing normal
+            text-align left
+            color #626262
+            &:hover,
+            &.select
+                background-color #626262
+                color #ffffff
+    &__header 
+        margin-bottom: 19px 
+        
+    &__link 
+        display: block 
+        font-size 14px
+        font-weight normal
+        line-height normal
+        letter-spacing 0.19px
+        text-align center
+        color #222222
+
+        &:hover
+            text-decoration: none
+            color: color
+
+    &__image 
+        display: block 
+        object-fit: contain
+        transition: .25s ease-in-out;
+        transition-property: opacity,visibility,transform;
+        
+        &--hover
+            transition: .25s ease-in-out;
+            transition-property: opacity,visibility,transform;
+            display: none!important
+
+    &__payment
+        br
+            display: none
+
+    &__figure
+
+        position relative
+        padding: 0 20px
+
+    &__main
+        display flex
+        flex-direction column
+    &__main,
+    &__actions
+        padding: 10px (gutter/2)
+
+    &__actions
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+        flex-wrap wrap
+        opacity 0
+        visibility hidden
+        margin-bottom 10px
+        position relative
+        &--status
+            position absolute
+            width: 70%
+            padding 5px 10px
+            height 60px
+            display flex
+            justify-content center
+            align-items center
+            left 0
+            top -60px
+            border 1px solid #ccc
+            border-radius 6px
+            background-color #FFFFFF
+            /* Font */
+            font-family Arial
+            font-size 18px
+            font-weight bold
+            font-stretch normal
+            font-style normal
+            line-height 1.2
+            letter-spacing normal
+            text-align center
+            color #ff6b6b
+    &__name
+        font-family Montserrat
+        font-size 14px
+        font-weight normal
+        font-stretch normal
+        font-style normal
+        line-height normal
+        letter-spacing normal
+        color #211915
+    &__quantity
+        display: flex
+        align-items: center
+        border: solid 1px #bebdbd
+        border-radius: (gutter/2)
+        border: 1px solid #939393;
+        max-width 85px
+        height 43px
+        &--input
+            text-align: center
+            border: solid 1px #939393 !important
+            border-width: 0px 1px !important
+            width 45px
+            height 41px !important
+        &--button
+            padding 0
+            background: transparent
+            color #bebdbd
+            font-size: 22px
+            font-weight: 400
+            line-height: 0
+            min-width initial
+            width 18px
+            height 41px
+            &:hover
+                color : color
+    
+    &__buy
+        flex: 1
+        &--button
+            background: rgb(107, 207, 96)
+            padding 0 13px
+            color: #fff
+            font-size: 18px
+            max-width 160px
+            font-weight: bold
+            line-height: normal
+            text-transform: uppercase
+            border-radius: 5px
+            display flex
+            align-items center
+            justify-content center
+            & svg 
+                width: 27px
+                height 28px
+                margin-right: 11px
+            & path
+                fill #FFFFFF
+            &:hover
+                opacity 0.8
+
+    .prices
+        &__old
+            font-size 13px
+            font-weight normal
+            line-height normal
+            letter-spacing 0.18px
+            color #bfbfbf
+            margin-right: 10px
+            text-decoration: line-through
+
+        &__special,
+        &__regular
+            font-size 24px
+            font-weight 700
+            line-height normal
+            letter-spacing 0.22px
+            text-align center
+            color #FF6B6B 
+
+        &__container
+            display: flex
+            justify-content: center
+            align-items: center
+
+    &__payment
+        text-align: center
+
+        .txt-corparcelas 
+            .preco-parc2
+                font-size: 0px
+                margin-right: 4px
+
+                strong
+                    font-size 13px
+                    line-height normal
+                    text-align center
+                    color #232323
+
+        .operadora
+            display: none

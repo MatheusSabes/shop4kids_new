@@ -1,0 +1,49 @@
+{
+  "name": "tt5.0",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "autoprefixer-stylus": "^1.0.0",
+    "axios": "^0.19.1",
+    "concurrently": "^5.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-stylus": "^2.7.0",
+    "jquery": "^3.4.1",
+    "npm-run-parallel": "^0.6.0",
+    "parallel": "^1.2.0",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "babel-install": "2.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-js-import": "^1.0.6",
+    "gulp-shell": "^0.7.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "npm-run-all": "^4.1.5"
+  },
+  "main": "index.js",
+  "scripts": {
+    "opencode": "cd opencode && opencode o && opencode w",
+    "gulp": "gulp",
+    "start": "npm-run-all --parallel opencode gulp parcelstart",
+    "gulp.deploy": "gulp deploy",
+    "opencode.upload": "cd opencode && opencode u",
+    "parcelstart": "parcel watch app/index.js -d opencode/js --out-file appreact --no-source-maps",
+    "deploy": "parcel build app/index.js -d opencode/js --out-file appreact --no-source-maps && cd opencode && opencode upload js/*"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,139 @@
+{% if banner.title %}
+    <div class="banner banner--product">
+        {{ banner.title }}
+    </div>
+{% endif %}
+
+<section class="page-product__essential" itemscope itemtype="http://schema.org/Product">
+
+
+    <div class="page-product__header">
+        {% element 'snippets/breadcrumb' { "class": 'breadcrumb'} %}
+        <h1 class="page-product__name" itemprop="name">{{ product.name }}</h1>
+
+        <div class="page-product__short-review">
+            {% element 'snippets/rating-short' { 'product': product } %}
+        </div>
+        
+        <div class="page-product__head">
+            {% if product.brand %}
+            <div class="page-product__brand">
+                Marca: <strong>{{ product.brand }}</strong>
+            </div>
+            {% endif %}
+
+            {% if product.model %}
+            <div class="page-product__model">
+                Modelo: <strong>{{ product.model }}</strong>
+            </div>
+            {% endif %}
+        </div>
+    
+    </div>
+
+    <div class="page-product__image">
+
+        {% if product.images %}
+            <div id="visualBlock" class="page-product__gallery {{ product.images|length  <= 1 and not product.video ? 'hide-carousel' }}">
+                {{ productHelper.gallery() }}
+            </div>
+        {% else %}
+            <div class="product-product__gallery page-product__gallery--no-image">
+                <img src="{{ asset('img/no-image.svg') }}" alt="Nenhuma imagem foi cadastrada">
+            </div>
+        {% endif %}
+
+    </div>
+
+    <div class="page-product__details">
+        <div class="page-product__head">
+            {% if product.brand %}
+            <div class="page-product__brand">
+                Marca: <strong>{{ product.brand }}</strong>
+            </div>
+            {% endif %}
+
+            {% if product.model %}
+            <div class="page-product__model">
+                Modelo: <strong>{{ product.model }}</strong>
+            </div>
+            {% endif %}
+        </div>
+        {% if productHelper.banner() %}{{ productHelper.banner() }}{% endif %}
+
+        {{ productHelper.bonus() }}
+
+        <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
+            
+            {% if product.available != 0 %}
+                {{ productHelper.variants() }}
+            {% endif %}
+
+            <div class="page-product__table">
+                <a href="#ProdAbas">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 16v-8h-24v8h24zm-22-6h2v2h1v-2h2v3h1v-3h2v2h1v-2h2v2h1v-2h2v3h1v-3h2v2h1v-2h2v4h-20v-4z"/></svg>
+                    Tabela de medidas</a>
+            </div>
+
+            <div class="page-product__short-review">
+                {% element 'snippets/rating-short' { 'product': product } %}
+            </div>
+
+            <div class="page-product__content">
+                <div class="page-product__price" data-module="pricing" data-snippet="snippets/pricing" data-product-id="{{ product.id }}">
+                    <div class="pricing">
+                        Carregando...
+                    </div>
+                </div>
+    
+                <div class="page-product__actions">
+                {{ productHelper.form() }}
+                </div>
+
+            </div>
+            {{ product.additional_information }}
+
+            {{ productHelper.gifts() }}
+
+            {{ productHelper.kit() }}
+            
+            {{ productHelper.shipping() }}
+
+            {% if product.additional_message %}
+            <div class="additional-message">
+                {{ product.additional_message }}
+            </div>
+            {% endif %}
+        </form>
+   
+        <div class="page-product__share">
+            {{ productHelper.social() }}
+        </div>
+    </div>
+</section>
+
+{% element 'snippets/product-tabs' { 'product': product, 'productTabs': productTabs } %}
+
+{% element 'buy-together' %}
+
+{% if product.related_products %}
+<div id="prognoos_lsi"></div>
+
+<section class="products-related">
+    <h3 class="related-title">{{ Translation('produtos_relacionados') }}</h3>
+
+    <div class="related__list">
+        {% for related in product.related_products %}
+        <div class="showcase__item">
+            {% element 'snippets/product' {"product": related} %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+{% if banner.bottom %}
+    <div class="banner banner-bottom {% if not settings.enable_banner_default %}mobile-off{% endif %}">
+        {{ banner.bottom }}
+    </div>
+{% endif %}

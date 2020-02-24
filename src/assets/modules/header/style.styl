@@ -1,0 +1,198 @@
+.page-catalog
+    & .header
+        margin-bottom 0
+
+.header 
+    position: sticky
+    top: 0
+    z-index: 200
+    margin-bottom: 45px
+    background: #fff
+    transition: all .2s ease-in-out
+    
+    [data-scrolling-mode=down] &
+        border-bottom-style: solid
+        border-bottom-width: 1px
+        box-shadow: 0 0 10px rgba(0,0,0,.1)
+
+    &__attendance 
+        display: none 
+
+    &__container 
+        max-width: 1300px
+        display: flex 
+        justify-content: space-between
+        align-items: center
+        margin: 0 auto
+        padding: 5px 15px
+        &--catalog
+            flex-wrap: wrap
+            & .header__search
+                max-width initial
+            & .header__customer
+                margin-left: 20px
+        &:before 
+            content: ''
+            position: absolute 
+            top: 0 
+            left: 0 
+            z-index: 2
+            width: 100% 
+            height: 100%
+            background: #fff
+            @media screen and (max-width: 992px)
+                content none
+    &__logo, &__menu, &__customer, &__minicart 
+        position: relative 
+        z-index: 3
+
+    &__minicart
+        &--popup
+            position absolute
+            top 50px
+            border-radius 15px
+            display none
+            justify-content center
+            align-items center
+            width: 220px
+            border 1px solid #222
+            right 0
+            background-color #FFFFFF
+            padding 15px 0
+            & svg
+                margin-left 10px
+                width 22px
+                & path
+                    fill: #38FF63
+            &.show
+                display flex !important
+        a.cart
+            display: flex
+            align-items: center
+
+            i
+                background: #fff
+
+                svg
+                    color: color
+                    
+            &:before
+                display: none
+
+            .cart-amount
+                margin-left: -2px
+                margin-top: -5px
+
+                span
+                    background: color
+                    border-radius: 50%
+                    width: 20px
+                    height: 20px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    color: #fff
+                    font-weight: 700
+    &__logo 
+        flex: 1 
+
+    &__customer 
+        position relative
+
+        @media(max-width: 991px)
+            display: none
+
+    &__search 
+        position: absolute 
+        top: 100% 
+        left: 0 
+        width: 100% 
+        z-index: 1
+        transition: all .2s ease-in-out
+        &--catalog
+            margin-left 20px
+            & .search
+                &__input
+                    &::placeholder
+                        font-family Montserrat
+                        font-size 16px
+                        font-weight normal
+                        font-stretch normal
+                        font-style normal
+                        line-height normal
+                        letter-spacing normal
+                        color #211915
+                &__form
+                    border 1px solid #FF6B6B
+                    border-radius 25px
+                &__button
+                    background-color: #FF6B6B
+                    border-radius 25px
+                    margin-right: -1px
+                    border 1px solid transparent
+                    &:hover
+                        border 1px solid #FF6B6B
+                        background-color: #FFFFFF
+                        & path
+                            fill #FF6B6B
+                    & path
+                        fill #FFFFFF
+        [data-scrolling-mode=down] &
+            transform: translate3d(0, -100%, 0)
+            opacity 0
+
+@media desktop
+    .header 
+        margin-bottom: (gutter/2)
+
+        &__container 
+            position: relative 
+            z-index: 20
+            box-shadow: 700px 0 0 #fff, -700px 0 0 #fff
+            background: #fff
+            &:before 
+                display: none 
+
+        &__menu 
+            display: none
+
+        &__logo
+            flex: 0 0 auto
+
+        &__customer 
+            position relative
+            display: block
+
+            &:hover
+                .customer--header .customer__main
+                    opacity 1
+                    visibility: visible
+                
+        &__attendance 
+            position relative
+            display: block
+         
+            &:hover
+                .attendance--header .attendance__main
+                    opacity 1
+                    visibility: visible
+
+        &__search 
+            flex: 1
+            min-width: 0
+            position: static
+            max-width 250px
+
+            [data-scrolling-mode=down] &
+                transform: none 
+
+    .page-product
+        .header
+            box-shadow: 0 0 0 1px rgba(0.0.0.0.2)
+
+
+.infobox.danger
+    display: none
+
+
+

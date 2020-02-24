@@ -1,0 +1,62 @@
+<div class="rulers {% if pages.current == 'catalog' %}rulers__color--red{% endif %}">
+    <div class="rulers__container">
+        <ul class="rulers__list">
+            <li class="rulers__item rulers__item--card">
+                <div class="rulers__box">
+                    <span class="rulers__icon">
+                        <!-- Cadeado -->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="27" viewBox="0 0 19 27">
+                            <image id="cadeado" width="19" height="27" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAbCAYAAACeA7ShAAAAAXNSR0IArs4c6QAAAa9JREFUSA3NlD0vBFEUhmetBItEJCqVRqOQiKBQoNBottTxC+iFTUSiV6g0IhqJj1pHCCKi2FWoVuEH+EiwkY3xvLMzk2HmztjZxps8uWfPPefdO3PvHcu2bSuGAeZOQKrANrRAZE+TFa0V0lW4g33ogyH4gArYoNxPRfzLBjlpCbSCApShBDOgnFYs9YK/Sj9wk22qQMrnnMi2rxnHIQ961DeYgmGQfA8/cJM3jOugZmkWftfcOzO1fJVYtU5NRkFA+pEBvZtWN2YIqURmCzpgAqbBMm2AjF5UYNAB+Um4gn6vxmTmzceNeoKvYEEjZkEfJ/6/Zt5u6rRnQ+uuL5HTYy7ALeiFpmWe3qLMuuECTHpiQudPdBqKTsn3JG1AnqIu2AGZHYJRzcaZ2sQRQzu8wxzI0KiklalRV+tPSjJbxsU75Y/E5TjXJLNjml9dgz3Gs0bMCjSvuQYa9d6MSlrZGJ3nbnfcV8QpSdrNVaouXTMNxUAcCpNWtklH8FYMhhwCCc9skZzOUFoe5CkzXfJdCK6g3niU/k99NdTonSXC1BrRBujRZKhLnIU0elbTN2xjQsshStfgAAAAAElFTkSuQmCC"/>
+                        </svg>
+                    </span>
+                    <span class="rulers__title">
+                        <strong>{{ settings.informationTitle01 }} </strong>
+                        {{ settings.informationSubtitle01 }}
+                    </span>
+                </div>
+            </li>
+            <li class="rulers__item rulers__item--card">
+                <div class="rulers__box">
+                    <span class="rulers__icon">
+                        <!--TRUCK-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="26" viewBox="0 0 44 26">
+                            <image id="noun_Truck_1387682" width="44" height="26" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAaCAYAAADMp76xAAAAAXNSR0IArs4c6QAAA7VJREFUWAm1lktIVFEYx2dyeplZWvYgk6ZFb5XIgmgh1MIoqCASiVomFEEUtAgkekAkPRa1S1sVQUU7KyisXSSteohlgkVpaS/t5Xum33+4Z7jK3Ln32twPfpz3d/7nO+eee8LxeDzkZLQtpO0WlDj1GWf9Z8btDofDTX7Hh10Et+NwOhwE55X5nTUU2s+QcgSH/Q51EyyR1fit8+s4XX+CNIv2r9AKfTBW+ATqhuAGc58nTVqEwYcobYCYVavBPXAAOmEmZNoKLYfvSF/BH6tskhEyC+Ac+soQXWUaImQ0eB58A7PSyVZeEdZqM235OBxESAWCFJAyyAHNJw1x2k7SVku+jfQa5bvkQxEyR6mYRH4pmAHaDq0yG4Iw+R5gXn0f+vCWQDcoONrpbNpy0KYje5pyAySCaaJ3jIqn0AiP4A4o+r2gRQRhEqCdlPhKtM2FAivVQvoQ+5jycfIh8vVKJUp2Bi6CFiBHI3QcopO2LmiT4ET0xky0iHIXGjaSLocW8rWJCEscFeWgr/YNPKFxIul3CNqymGB47CRo0hHZB43kX5PehxcmwuRDzXAEdAR01Wjl06wyScZN8wyCNNwmQB2k9kirXReBjoPEblE5KZhVtFMhkkbHoD46zTEV5H8TrIBlkAd204J0D89HH3LiNUnB9l62vKIclOkYiB2wEmoR9ZE0nWWZWyJdJ21NEKbrSwHRdboaSsHNIm4RdnPwP+06DrprD/tx4iXCfvz56asIC1/mRXBQR8KXUNPZi2DfUTDO06TmYzZpmq6jmmJugiVWv+dRxvWyFrbCeK+9L3LI+dVDPmH4WmP51CPIyX6mfA8zUI+hq7AHFIW3oDuxDcydqb+jjssDUP8i8Gqz6Sjk9yXo1yv6QUF8CPoDRsGYfipTnATrufkJ9OdTNPTg1gQ18AvWg/5Me+ESfIAL4NX+0vE9yM8J0HtYedVVQh1oXr1xjElwsdO1pkbZYtBvWivXJd8JUbZS0ZZdZjdySbUTJjpmrNqdTO+UKCiKXVBk81mPTwWnGrQQRVw+dTxznSKsLb4CxaAnoDor/wzH60iThvNCCopwC6ifVzM+m/G5yj4In3rU/4BWUHAkWHToYeGJWCxWAXHIt4+hfBO67XVe84zbDPJZYB9D+Tr8tteZvCexpjNOnoMmkPgSOGvKpo/flPFNlo9tpKVwyipvT+XLr+AsnN2DYeiHHtiZyrGfOnw0gGwAemGX0/iUZ5izktZwNocOMzh7upYyYvjUh5bn5vMfM77HMrtJbzsAAAAASUVORK5CYII="/>
+                        </svg>
+                    </span>
+                    <span class="rulers__title">
+                        <strong>{{ settings.informationTitle02 }} </strong>
+                        {{ settings.informationSubtitle02 }}
+                    </span>
+                </div>
+            </li>
+            <li class="rulers__item rulers__item--security">
+                <div class="rulers__box">
+                    <span class="rulers__icon">
+                        <!--DISCOUNT-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="32" viewBox="0 0 25 32">
+                            <image id="noun_Discount_147368" width="25" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAgCAYAAADnnNMGAAAAAXNSR0IArs4c6QAAArBJREFUSA3Nlj1oVEEQxy9BiYUG/MDERAsR0davIgYxtYgIQQU1dqlEo4i9WqTR0k5BSCxMVNQ2QbRQCViIKcSIprAQjEQUBVHQ5+9/b+cxebf37o6c4MAvszszu7O7b3YvLUmSlIKsRu+ASciMwbco1epGb6K9HZqaQPP7JDP0V0AfNFVa3HFp4g4YhI9wHZqyq3wS5i21wyXQNxoFJe6EDfAerkBjwk6OaTdwED6DZC5V2d9ftL6F3k204utmCUvqhj7oh5VwAF7BALyAh/AdJD3wDNrgENQnYUUD6B9wI/TPol9DV+j7Ve/BJhkDb6/aNseu8rAkOYHeCbNwHpTMYrzuxS65Bd4ebbeG/T5Hz8FGmIe78AWmICZPMfbCERiLBSywuZXM074c+qvQm50vukL8tqM7RbF+8G8CzxQF49sLI7AWbKwluu1s5itr6ywnQKIyNlte78f3E0ZhCtaAxViicWczH1c6DVyPluwDs+X1BL7HsBUkef/u1FxZdRbYRoBW9wc6wOxe63W4Bh/gHKgS78FxsLge2pIFR5d/VmapClWYnhG9XyaybQNdVD2in2AZTMMj0KU1UdU9gXFQ9WXHZSuR1h2RdILZB2lPggrjAnyFq2D+vLajK9+jvNP6b5lAsg7MZlqlrg+t470f8VucFcOIGWL6HRNIfCIVyDQMg0r+KMTGmk3lXhigQEvU5WK30H4A/c5mk3qto5UMeWO1dixRtVizn07nTy+3GWvpN2FQN7pW7FCIzR7XWgO8X0+/pCjRqTSkfI+ysVkDZz3tmTCJ/0Y27mQsgea1gEa0HZ1PZAn0sSvmqjDEgiI221E7vsMg0beIzhc1VgvO2V/SN6magIBS/u0qPzUN/NEv5ARcLBqz2CRFc2c++43PDP+i8d8lWcou9c9gw/IXMIMibiT/WzwAAAAASUVORK5CYII="/>
+                        </svg>
+                    </span>
+                    <span class="rulers__title">
+                        <strong>{{ settings.informationTitle03 }} </strong>
+                        {{ settings.informationSubtitle03 }}
+                    </span>
+                </div>
+            </li>
+            <li class="rulers__item rulers__item--send">
+                <div class="rulers__box">
+                    <span class="rulers__icon">
+                        <!--SECURITY-->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="26" viewBox="0 0 23 26">
+                            <image id="noun_Security_2839859" width="23" height="26" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAAAXNSR0IArs4c6QAAAjNJREFUSA2dVTtIHFEUdV1EUDBGbPyACIFAloDGRsRC/MQsyFqktUgbrLYJBFJoY7FdKjWktbC0MLEU0a3ECBqwEJQQw5LGfKogOjln9t7hzfWts86Fs/d3ztllZt5OJgiCBk+8xewl0Ap4CaLJIP8DDoFXQDxobtCOPk3MQBTzijWy3BTnF5Zco+8R/k+7t+ZLQly3xIR+XnSfXZ6aD2O4LYSyS7hHvSz6H8gFIEPzTzJk+gDoF6bJbxyvIxowLoBnQBpDq+mFzw4QNMqz8wX5IP4cpe6+Q7lFtZrzeU4TQxBtAANG3Mleze86KEYXtTlU+0ABaImm1eKGSc2zZpnUPgHhWEh55LIRhL5q3m2WTejfAaNmzpbGX2VO4/D6Sq/pQVjgpp7xziLcu95WHYWfT51dzplPO3NXy3qPPBarLBCPAJf0PJxWPzqROpw+j9rl2voa+wqH/AWMImBJk+EmCH4jX0qdZDwovBLNstLwIFlz9uOyZ5oCfBx3tib8xzpckcFIDTFNeZmUXyu3is8puUp6KMNvdRioxpf5b8oYAyJzEhc5RSwAPmHSTC/fruqt4ITuiHpfFKrXFwa1fKrCuS4185G7IgNR7xf0gfuLAgR/vXrFLosOeWg0XqPQuS9PKBF5znJ9As54oM4BxhbQD7jcZvTvAY1ZFO4+rG8NHFIG9UdVIxdlx0P3V+a8efaLI8+oEKGv54msiNkfyUx8Kfv40SwqkojYlwAG3/BdQKL2P0z95Q//uyqnAAAAAElFTkSuQmCC"/>
+                        </svg>
+                    </span>
+                    <span class="rulers__title">
+                        <strong>{{ settings.informationTitle04 }} </strong>
+                        {{ settings.informationSubtitle04 }}
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

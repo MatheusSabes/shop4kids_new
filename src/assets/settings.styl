@@ -1,0 +1,72 @@
+/**
+ *  Settings Global do CSS (Stylus)
+ *  - Essas Configurações são chamados em todos arquivos styles 
+ *  - Não se deve inserir estruturas css, é permitido somente variaves e funções
+ */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+Montserrat = 'Montserrat', sans-serif
+
+MyriadPro = 'MyriadPro', sans-serif
+
+// Placeholder
+$button 
+    display: inline-block 
+    padding: 13px 15px
+    border-radius: 0
+
+    font-size: 14px
+    font-weight: regular
+
+    background: rgba(0,0,0,.5)
+    color: #fff
+
+    &:hover 
+        text-decoration: none 
+// mixins
+container(args...) 
+    width: 100%
+    max-width: args 
+    padding: 0 (30px/2)
+
+icon(args...)
+    content: args
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+// keyframes
+@keyframes slideOpen
+    0% 
+        transform: translate3d(-100%, 0, 0)
+    50% 
+        transform: translate3d(0, 0, 0)
+
+@keyframes slideOpenButton 
+    0%, 50%
+        opacity: 0 
+    100% 
+        opacity: 1
+
+@keyframes slideClose
+    0%, 50% 
+        transform: translate3d(0, 0, 0)
+    100% 
+        transform: translate3d(-100%, 0, 0)
+
+@keyframes slideCloseButton 
+    0%
+        opacity: 1
+    50%, 100%
+        opacity: 0
+
+desktop = unquote("screen and (min-width: 992px)")
+mobile = unquote("screen and (max-width: 991px)")
+
+viewport = 1300px
+gutter = 30px
+
+color = #ff8484
+
+$container
+    width: viewport
+    max-width: "calc(100% - %s)" % gutter
+    margin-left: auto 
+    margin-right: auto

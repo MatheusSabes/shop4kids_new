@@ -1,0 +1,16 @@
+<div class="paginate">
+    <div class="paginate__container">
+        
+        {% if paginate.params.pageCount > 1 %}
+        <div class="paginate__pages">
+        
+            {{ paginate.numbers({
+                'modulus': 5,
+                'separator': '',
+                'class': 'paginate__link paginate__link--number',
+                'currentClass': 'paginate__link--current'
+            }) }}
+        </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,37 @@
+.socials
+    &__title
+        @media screen and (max-width: 992px)
+            text-align center
+    &__list 
+        display: flex 
+        justify-content: flex-start 
+        align-items: center 
+        margin: -5px 
+        @media screen and (max-width: 992px)
+            justify-content center
+    &__item 
+        position: relative 
+        padding: 5px 
+
+    &__icon 
+        font-size: 30px
+        
+        svg 
+            fill: #ff6b6b
+
+    &__label 
+        position: absolute 
+        visibility: hidden
+        opacity: 0
+    
+    &--header
+        margin-top 12px
+
+        .socials
+            &__title
+                display: none
+
+    &--footer
+        margin-top: 10px
+        @media screen and (max-width: 992px)
+            text-align center

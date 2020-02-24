@@ -1,0 +1,64 @@
+.filtro
+    &__marcas
+        display: none
+
+.filtro-ordem
+    font-family MyriadPro
+    font-size 16px
+    font-weight normal
+    font-stretch normal
+    font-style normal
+    line-height normal
+    letter-spacing normal
+    color #000000
+
+    & select
+        width 112px
+        height 32px
+        border solid 2px #ff6b6b
+        color #ff6b6b
+    & option
+        font-family MyriadPro
+        font-size 16px
+        font-weight normal
+        font-stretch normal
+        font-style normal
+        line-height normal
+        letter-spacing normal
+        color #ff6b6b
+& label.filtros
+    &:not(.filtro-ordem)
+        display: none
+.filtros
+    display: block
+    margin: (30px / 2) 0
+    padding: 5px 
+    float: none
+    font-size: 12px
+    font-weight: bold 
+    text-transform: uppercase
+
+.toolbar 
+    &__filter 
+        form 
+            margin: -5px
+@media (min-width: 992px)
+    .filtros 
+        margin: 0
+        
+    .toolbar 
+        &__container 
+            display: flex 
+            align-items: flex-end
+
+        &__paginate 
+            order: -1
+            flex: 1 
+            min-width: 0
+
+        &__filter 
+            flex: 0 0 auto
+
+            form 
+                display: flex 
+                justify-content: space-between

@@ -1,0 +1,85 @@
+<article class="product">
+    
+    <div class="product__header">
+        <figure class="product__figure">
+        {% if product.images %}
+            <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" data-tray-tst="vitrine_produto_link_imagem">
+                <img class="product__img" src="{{ product.images[0].full }}" alt="{{ product.name }}" title="{{ product.name }}">
+            </a>
+        {% else %}
+            <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" data-tray-tst="vitrine_produto_link_imagem">
+                <img class="product__img" src="{{ asset('img/no-image.svg') }}" alt="Nenhuma imagem foi cadastrada" width="100" title="{{ product.name }}">
+            </a>
+        {% endif %}
+        </figure>
+        
+        {% if settings.discount %}
+            {% set porcentagemDesconto = 100 - ( product.price_offer / product.price ) * 100 %}
+            {% if porcentagemDesconto < 100 %}
+                <span class="discount"> {{ porcentagemDesconto|number_format }}% de desconto </span>
+            {% endif %}  
+        {% endif %}             
+    </div>
+
+    {% element 'snippets/flags' { product:product ,  modifier: 'product' } %}
+
+    <div class="product__main">
+
+        <h1 class="product__name"><a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" data-tray-tst="vitrine_produto_link_imagem">{{ product.name }}</a></h1>
+        <!--RATING-->
+        <div class="product__rating">
+            {% if product.ranking.rating == 0 %}
+                {% set productRating = 1 %}
+            {% else %}
+                {% set productRating = product.ranking.rating %}
+            {% endif %}
+
+            {% for star in 1..productRating %}
+                <i class="rating__stars" data-stars-count="{{ star }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                </i>
+            {% endfor %}
+        </div>
+
+        <div class="prduct__rating">
+            <i class="rating__stars" data-stars-count="{{ product.ranking.rating }}"></i>
+        </div>
+
+        <div data-module="pricing" data-snippet="snippets/product-payment" data-product-id="{{ product.id }}">
+            <div class="pricing">
+                Carregando...
+            </div>
+        </div>
+    </div>
+
+    <div class="product__actions" data-product="{{ product.id }}" data-variant-id="">
+        <div class="product__quantity">
+            <button type="button" id="minus" class="product__quantity--button" data-cart="less" onclick="quantityCart(-1, this)">-</button>
+            <input type="text" class="product__quantity--input" data-cart="quantity" data-qtde="quantidade" name="qty" value="1" size="2">
+            <button type="button" id="plus" class="product__quantity--button" data-cart="more" onclick="quantityCart(1, this)">+</button>
+        </div>
+
+        <button type="button" class="product__buy--button  buy__button" data-cart="buy">
+        <!--SVG-->
+        <svg height="512pt" viewBox="0 -31 512.00033 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m166 300.003906h271.003906c6.710938 0 12.597656-4.4375 14.414063-10.882812l60.003906-210.003906c1.289063-4.527344.40625-9.390626-2.433594-13.152344-2.84375-3.75-7.265625-5.964844-11.984375-5.964844h-365.632812l-10.722656-48.25c-1.523438-6.871094-7.617188-11.75-14.648438-11.75h-91c-8.289062 0-15 6.710938-15 15 0 8.292969 6.710938 15 15 15h78.960938l54.167968 243.75c-15.9375 6.929688-27.128906 22.792969-27.128906 41.253906 0 24.8125 20.1875 45 45 45h271.003906c8.292969 0 15-6.707031 15-15 0-8.289062-6.707031-15-15-15h-271.003906c-8.261719 0-15-6.722656-15-15s6.738281-15 15-15zm0 0"/><path d="m151 405.003906c0 24.816406 20.1875 45 45.003906 45 24.8125 0 45-20.183594 45-45 0-24.8125-20.1875-45-45-45-24.816406 0-45.003906 20.1875-45.003906 45zm0 0"/><path d="m362.003906 405.003906c0 24.816406 20.1875 45 45 45 24.816406 0 45-20.183594 45-45 0-24.8125-20.183594-45-45-45-24.8125 0-45 20.1875-45 45zm0 0"/></svg>
+        Comprar</button>
+        <div class="product__variants">
+            {% for sku in product.variants %}
+                
+                {% set dataVariant = sku.id %}
+                {% for type in sku %}
+                    
+                    {% for key, value in type %}
+                    {% if value.type == 'Tamanho' %}
+                        <div class="product__variants--item" data-id="{{ dataVariant }}">
+                            <span>{{ value.value }}</span>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+    
+</article>
+

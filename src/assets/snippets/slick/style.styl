@@ -1,0 +1,65 @@
+.slick
+    &-arrow 
+        position: absolute 
+        top: 50%
+        z-index: 100
+
+        transform: translateY(-50%)
+        transition: all .2s ease-in-out
+        
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAaCAYAAAC+aNwHAAAAAXNSR0IArs4c6QAAAQZJREFUOBFjYICASCC1GYgToXySKHmg6r9A/B+KK0jSDVQsDcR/oJphhrSRakgGmgEggzpINSRzUBvSA3QdIylewuad6QNiSDzQVuQ0Aoodkl0STStDFgINZmACEWSClaTqSwNqQA8PL2INAWUwWD6B0XOBYgTTBkhBNxbNvcRoZgYqmo1Fcw1QjCBgA6pYDcQw54JokP+zgJgg4AKq2AXEyJp/AfmgUosgEACqOA7EyJq/AflEhbYkUOFlNM0fgXxbICYIlIAq7gAxss2vgXwDgjqBCpSB+AkQI2t+COSrADFRoAWoClnzNSBfhiidUEVhSAacBrJFSdEMU+sGZCQBMSgKSQIA1Ptxf8zSLEQAAAAASUVORK5CYII=')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: initial
+        background-color: transparent
+        font-size: 0
+        width: 47px
+        height: 47px
+        padding: 0
+        min-width: initial
+        border solid 1px #bcbbba
+        border-radius 40px
+
+
+    &-next
+        right: 20px 
+
+    &-prev 
+        left: 20px
+    
+    &-list, &-track
+        min-width: 100%
+
+    &-dots
+        display: flex
+        justify-content: center
+        align-items: center
+
+        li
+            margin-right: 6px
+
+            &:last-child
+                margin: 0
+
+            button 
+                background: transparent
+
+                &:before    
+                    content: ''
+                    display: block
+                    background: #878787
+                    border-radius: 50%
+                    height 18px
+                    width 18px
+            
+            &.slick-active
+                button 
+                    background: transparent
+
+                    &:before    
+                        content: ''
+                        display: block
+                        background: color
+                        border-radius: 50%
+                        height 18px
+                        width 18px

@@ -1,0 +1,99 @@
+.customer 
+    &__container 
+        display: flex 
+        align-items: center
+
+    &__main 
+        padding: (30px/2) 0
+    &__title
+        font-family Montserrat
+        font-size 16px
+        font-weight normal
+        font-stretch normal
+        font-style normal
+        line-height normal
+        letter-spacing normal
+        color #211915
+        margin-left 10px
+        margin-right 20px
+    &__icon 
+        margin: 0px 4px
+        &--svg
+            & path,
+            & circle
+                fill #ff6b6b
+        svg
+            width 30px
+            height 30px
+            color: color
+
+    &__links, &__label
+        text-align: center
+        a
+            display: block
+            white-space: nowrap
+            font-size   : 12px
+            font-weight : 400
+            line-height : normal
+            color       : #211915
+            margin-bottom: 7px
+
+            &:hover
+                text-decoration: none
+                color : color
+
+    &__links, &__label
+        margin-bottom: 7px
+        span
+            display: block
+            font-size   : 12px
+            font-weight : 400
+            line-height : normal
+            color       : #211915
+
+    &__main 
+        flex: 1 
+        min-width: 0
+
+    &__link 
+        &--icon 
+            display: flex 
+            justify-content: center 
+            align-items: center
+
+            font-size 14px
+            font-weight normal
+            line-height normal
+            letter-spacing 0.19px
+            color #878787
+
+            &:hover 
+                text-decoration: none
+                color #878787
+
+
+    &--header 
+        .customer
+            &__main 
+                display: none 
+
+    &--navigation  
+        padding: 30px
+        border-bottom: solid 1px rgba(0,0,0,.1)
+
+@media desktop 
+    .customer
+        &--header 
+            .customer
+                &__main
+                    display: block
+                    position absolute
+                    top: 100%
+                    background: #fff
+                    box-shadow 0 0 0 1px #bcbbba
+                    border-radius: 10px
+                    padding: (gutter /2)
+                    left 50%
+                    transform: translateX(-50%)
+                    opacity 0
+                    visibility hidden

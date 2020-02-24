@@ -1,0 +1,36 @@
+{% set class = '' %}
+{% if modifier %}{% set class = " flags--" ~ modifier %}{% endif %}
+<div class="flags flags{{ class }}">
+    <ul class="flags__ul">
+        {% if product.free_shipping %}           
+            <li class="flags__item">
+                <span class="flags__title flags__free-shipping">Frete Gr&#225;tis</span>
+            </li>
+        {% endif %}
+
+        {% if product.new %}
+            <li class="flags__item">
+                <span class="flags__title flags__new">Novidade</span>
+            </li>
+        {% endif %}
+
+        {% if product.additional_button and settings.labelExtra %}
+            <li class="flags__item">
+                <span class="flags__title flags__extra">{{ settings.labelExtra }}</span>
+            </li>
+        {% endif %}
+
+        {% if product.featured %}
+            <li class="flags__item">
+                <span class="flags__title flags__featured">Destaque</span>
+            </li>
+        {% endif %}
+    
+    </ul>
+
+    {% set porcentagemDesconto = 100 - ( product.price_offer / product.price ) * 100 %}
+    {% if porcentagemDesconto < 100 %}
+        <span class="flags__title flags__offer">- {{ porcentagemDesconto|number_format }}% </span>
+    {% endif %}  
+
+</div>

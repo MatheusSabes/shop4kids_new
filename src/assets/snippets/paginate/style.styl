@@ -1,0 +1,67 @@
+.paginate 
+    text-align: center 
+
+    &__pages
+        display: inline-flex 
+        flex-flow: row wrap 
+        margin: 5px -5px
+
+    &__link a, &__link--current 
+        flex: 0 0 auto
+        display: flex 
+        justify-content: center 
+        align-items: center 
+        padding: 5px
+        margin: 5px 
+        font-family MyriadPro
+        font-size 24px
+        font-weight normal
+        font-stretch normal
+        font-style normal
+        line-height normal
+        letter-spacing normal
+        color: #000
+
+        &:hover 
+            color: #ff6b6b
+
+
+    &__link 
+        &--current
+            background-color: transparent
+            color #ff6b6b
+
+        &--first, &--prev, &--next, &--last 
+            a 
+                &:before 
+                    font-size: 14px 
+
+        &--first a:before 
+            icon: '\f100'
+
+        &--prev a:before 
+            icon: '\f104'
+
+        &--next a:before 
+            icon: '\f105'
+
+        &--last a:before 
+            icon: '\f101'
+
+@media (min-width: 992px) 
+    .paginate 
+        padding-right: 20px
+        text-align: left
+
+        &__container 
+            display: flex 
+            justify-content: flex-start 
+            align-items: center 
+
+        &__pages 
+            flex: 0 0 auto 
+
+        &__count 
+            display: none
+            flex: 1 
+            min-width: 0 

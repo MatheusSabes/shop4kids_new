@@ -1,0 +1,108 @@
+{# Configuração do limite de Nivel #}
+
+{% if not settings.nivelLimit %}
+    {% set nivelLimit = 2 %}
+{% else %}
+    {% set nivelLimit = settings.nivelLimit %}
+{% endif %}
+
+{# Configuração de primeiro nivel #}
+{% if not nivel %}{% set nivel = 1 %}{% endif %}
+{% if not menu %}{% set menu = categories %}{% endif %}
+
+{% set class = '' %}
+{% if modifier %}{% set class =  ' menu--' ~ modifier %}{% endif %}
+
+<div class="menu menu--nv{{ nivel }}{{ class }}{{ nivel > 1 ? ' menu--sub' : '' }}">
+    {% if nivel > 1 and nivel < 3 %}
+    <!--HEADER MENU-->
+    <div class="menu__ul--top">
+    
+    <div class="menu__ul--container">
+    {% endif %}
+        <ul class="menu__ul menu__ul--nv{{ nivel }}">
+            {% for category in menu %}
+                {% set hasChild = '' %}
+                {% if category.name != 'Promoções' %}
+                    {% if category.children and nivel < nivelLimit %} {% set hasChild = ' menu__item--has-child' %}{% endif %}
+                    <li class="menu__item menu__item--nv{{ nivel }}{{ hasChild }}">
+                        <a href="{{ category.link }}" class="menu__link menu__link--nv{{ nivel }}" data-tray-tst="categoria_lvl_{{ nivel }}">
+                            {% if nivel == 1 and pages.current == 'catalog' %}
+                                {% if category.images[0] %}
+                                    <img src="{{ category.images[0] }}" class="images"/>
+                                {% endif %}
+                            {% endif %}
+                            <span class="menu__label">{{ category.name }}</span>
+                        </a>
+                        {% if category.children and nivel < nivelLimit %}                
+                            {% element 'snippets/menu' { menu: category.children, nivel: (nivel + 1) }  %}
+                        {% endif %}
+                    </li>
+                {% endif %}
+            {% endfor %} 
+        </ul>
+    {% if nivel > 1 and nivel < 3 %}
+        <!--FILTRO TAMANHO-->
+        <div class="menu__filter__tamanho--container">
+            <small>Tamanho</small>
+            <article>
+                <a href="#" class="menu__filter__tamanho--item">P</a>
+                <a href="#" class="menu__filter__tamanho--item">G</a>
+                <a href="#" class="menu__filter__tamanho--item">GG</a>
+                <a href="#" class="menu__filter__tamanho--item">XG</a>
+                <a href="#" class="menu__filter__tamanho--item">M</a>
+                <a href="#" class="menu__filter__tamanho--item">RN</a>
+            </article>
+        </div>
+
+        <!--FILTRO IDADE-->
+        <div class="menu__filter__idade--container">
+            <small>Idade</small>
+            <article>
+                <a href="#" class="menu__filter__idade--item">0 a 12 meses</a>
+                <a href="#" class="menu__filter__idade--item">1 a 3 anos</a>
+                <a href="#" class="menu__filter__idade--item">4 à 10 anos</a>
+            </article>
+        </div>
+    </div>
+    <!--FILTRO ESTAÇOES DO ANO E FAIXAS DE PREÇO-->
+    <div class="menu__filter--container">
+        <!--FILTRO ESTAÇOES DO ANO-->
+        <div class="menu__filter__ano--container">
+            <small>Estações do ano</small>
+            <article>
+                <a href="#" class="menu__filter__ano--item">Inverno</a>
+                <a href="#" class="menu__filter__ano--item">Outono</a>
+                <a href="#" class="menu__filter__ano--item">Verão</a>
+                <a href="#" class="menu__filter__ano--item">Primavera</a>
+            </article>
+        </div>
+        <!--FILTRO FAIXAS DE PREÇO-->
+        <div class="menu__filter__faixas--container">
+            <small>Faixas de preço</small>
+            <article>
+                <a href="#" class="menu__filter__faixas--item">De R$ 8,58 a R$ 19,98</a>
+                <a href="#" class="menu__filter__faixas--item">De R$ 19,99 a R$ 30,98</a>
+                <a href="#" class="menu__filter__faixas--item">De R$ 30,99 a R$ 56,98</a>
+            </article>
+        </div>
+    </div>
+    <figure class="menu__image">
+        <a href="">
+            <img src="https://via.placeholder.com/190x313" alt="">
+        </a>
+    </figure>
+    </div>
+    <!--FOOTER MENU-->
+    <footer class="menu__ul--footer">
+        <small>Marcas</small>
+        <!--FILTRO MARCAS-->
+        <article>
+            <a href="#" class="menu__filter__marcas--item"><img src="https://via.placeholder.com/85x35" alt=""></a>
+            <a href="#" class="menu__filter__marcas--item"><img src="https://via.placeholder.com/85x35" alt=""></a>
+            <a href="#" class="menu__filter__marcas--item"><img src="https://via.placeholder.com/85x35" alt=""></a>
+            <a href="#" class="menu__filter__marcas--item"><img src="https://via.placeholder.com/85x35" alt=""></a>
+        </article>
+    </footer>
+    {% endif %}
+</div>

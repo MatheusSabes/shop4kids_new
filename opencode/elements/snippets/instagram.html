@@ -1,0 +1,16 @@
+{% if settings.instagramUserId or settings.instagramToken %}
+<div class="instagram">
+    <div class="instagram__container">
+        <div class="instagram__head">
+            <span> Siga-nos </span>
+            <a href="https://www.instagram.com/{{ settings.instagram }}" class="instagram__link" target="_blank">
+                @{{ settings.instagram }}
+            </a>
+        </div>
+        
+        <input type="hidden" data-user-id="{{ settings.instagramUserId }}" class="instagram__id">
+        <input type="hidden" data-token="{{ settings.instagramToken }}" class="instagram__token">
+        <div id="instafeed-gallery-feed" class="instafeed__list"></div>
+    </div>
+</div>
+{% endif %}

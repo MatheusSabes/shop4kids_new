@@ -1,0 +1,33 @@
+<section class="newsletter" data-tray-tst="newsletter_box"
+style="background:url('https://images.tcdn.com.br/678114/themes/101/img/settings/newsletterbg.png?328d0846cc7657319cc2a34a2954f7601582493961') no-repeat top center fixed; background-size: cover;">
+
+    <div class="newsletter__container">
+        <header class="newsletter__header">
+            {% if settings.newsletter_title %}
+                <h1 class="newsletter__title">{{ settings.newsletter_title }}</h1>
+            {% else %}
+                <h1 class="newsletter__title">
+                    Cadastre-se em nossa newsletter!
+                </h1>
+            {% endif %}
+            <span class="newsletter__description">
+                Ganhe <strong>desconto</strong> em sua primeira compra! (Insira o código do cupom diretamente no carrinho)
+            </span>
+        </header>
+        <div class="newsletter__main">
+            <form class="newsletter__form" action="{{ links.newsletter }}" method="post" name="newsletter" data-tray-tst="newsletter_form">
+                <div class="newsletter__box">
+                    <label for="name" style="font-size: 0">name</label>
+                    <input class="newsletter__input" id="name" name="name" type="text" placeholder="Seu nome" required>
+                </div>
+                <div class="newsletter__box">
+                    <label for="email" style="font-size: 0">email</label>
+                    <input class="newsletter__input" name="email" type="email"id="email" placeholder="Seu e-mail" data-tray-tst="newsletter_email" required>
+                </div>
+                <div class="newsletter__actions">
+                    <button class="newsletter__button" data-tray-tst="newsletter_cadastrar">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

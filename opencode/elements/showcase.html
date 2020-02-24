@@ -1,0 +1,21 @@
+{% if products|length > 0 %}
+    <div class="showcase">
+        {% if showcaseTitle %}
+        <div class="showcase__header">
+            <h2 class="showcase__title title">{{ showcaseTitle }}</h2>
+        </div>
+        {% endif %}
+        <div class="showcase__list" data-carousel="{{ carousel }}">
+        {% for product in products %}
+            {% set ranking = product.ranking %}
+            <div class="showcase__item" data-tray-tst="vitrine_produto">
+                {% element 'snippets/product' {"product": product} %}
+            </div>
+        {% endfor %}
+            <div class="showcase__item showcase__item--empty"></div>
+            <div class="showcase__item showcase__item--empty"></div>
+            <div class="showcase__item showcase__item--empty"></div>
+            <div class="showcase__item showcase__item--empty"></div>
+        </div>
+    </div>
+{% endif %}

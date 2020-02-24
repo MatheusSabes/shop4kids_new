@@ -1,0 +1,38 @@
+{% if name %}
+    {% if banners[name] %}
+        {% set type = banners[name].type %}
+        <div class="banner banner--{{ name }} banner--{{ type }}">
+            {% if type == 'javascript' %}
+                {% if banners.home.slides %}
+                <div class="banner__list">
+                    {% for slide in banners.home.slides %}
+                    {% set link = slide.link %}
+                    {% set image = slide.image %}
+                    {% set target = slide.target %}
+                    {% set label = slide.label %}
+
+                    <div class="banner__item">
+                        <a class="banner__link" href="{{ link }}" alt="Banner" title="Banner" target="{{ target }}">
+                            <img class="banner__img" src="{{ image }}" alt="{{ label }}">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endif %}
+
+            {% if type == 'image' %}
+            {% set link = banners[name].link %}
+            {% set image = banners[name].src %}
+            {% set target = banners[name].target %}
+            {% set label = banners[name].label %}
+
+            <div class="banner__item">
+                <a class="banner__link" alt="Banner" title="Banner" href="{{ link }}" target="{{ target }}">
+                    <img class="banner__img" src="{{ image }}" alt="{{ label }}">
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endif %}

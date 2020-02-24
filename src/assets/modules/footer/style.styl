@@ -1,0 +1,72 @@
+.footer 
+
+    &__container 
+        max-width: 1300px 
+        margin: 0 auto
+        padding: 50px (30px / 2)
+
+    &__row 
+        display: flex 
+        justify-content: space-between
+        flex-flow: row wrap
+        margin: -(30px / 2)
+
+    &__box 
+        flex: 0 1 240px
+        padding: (30px / 2)
+        @media screen and (max-width: 992px)
+            justify-content center
+            flex 0 1 100%
+        &--item
+            font-family Montserrat
+            font-size 14px
+            font-weight normal
+            font-stretch normal
+            font-style normal
+            line-height 1.36
+            letter-spacing normal
+            color #211915            
+            @media screen and (max-width: 992px)
+                text-align center
+    &__title 
+        font-family Montserrat
+        font-size 16px
+        font-weight bold
+        font-stretch normal
+        font-style normal
+        line-height normal
+        letter-spacing normal
+        color #211915
+        padding-bottom: 16px
+        @media screen and (max-width: 992px)
+            text-align center
+    &__link 
+        font-family Montserrat
+        font-size 14px
+        font-weight normal
+        font-stretch normal
+        font-style normal
+        line-height 1.36
+        letter-spacing normal
+        color #211915 
+
+        &:hover
+            color: color
+
+    &__contact 
+        &-icon 
+            display: inline-block
+            vertical-align: middle
+            margin-right: 5px
+            font-size: 20px
+            
+            
+.payments
+    &__list
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        flex-wrap: wrap
+
+    &__item
+        margin: 5px

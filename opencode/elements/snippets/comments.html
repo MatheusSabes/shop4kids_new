@@ -1,0 +1,47 @@
+<div class="comments">
+    {% if customer.logged == 0 %}
+        <a data-tray-login href="#">Faça seu login e comente.</a>
+    {% else %}
+        <form method="POST" action="/mvc/store/product/add_comment?loja={{ store.id }}" class="comments__form">
+            <input type="hidden" name="ProductComment[product_id]" value="{{ product.id }}">
+            <input type="hidden" name="ProductComment[customer_id]" value="{{ customer.id }}">
+
+            <div class="comments__item">
+                <label for="comments__name">Nome: </label>
+                <input id="comments__name" disabled class="text" type="text" data-input-customer="name">
+            </div>
+
+            <div class="comments__item">
+                <label for="comments__email">E-Mail: </label>
+                <input disabled class="text" type="text" data-input-customer="email">
+            </div>
+            
+            <div class="comments__item">
+                <input id="comments__show" type="checkbox" name="ProductComment[show_email]" value="1" >
+                <label for="comments__show">Mostar meu e-mail</label>
+            </div>
+
+            <div class="comments__item">
+                <label for="comments__message"></label>
+                <textarea id="comments__message" name="ProductComment[comment]" id="" cols="30" rows="10"></textarea>
+                <div>Máximo de 512 caracteres.</div>
+            </div>
+
+            <div class="comments__rating">
+                <span data-text="Ruim" class="comments__star"><i class="fas fa-star"></i></span>
+                <span data-text="Regular" class="comments__star"><i class="fas fa-star"></i></span>
+                <span data-text="Bom" class="comments__star"><i class="fas fa-star"></i></span>
+                <span data-text="Ótimo" class="comments__star"><i class="fas fa-star"></i></span>
+                <span data-text="Excelente" class="comments__star"><i class="fas fa-star"></i></span>
+                <input type="hidden" name="ProductComment[rating]" value="0">
+            </div>
+
+            <div class="comments__actions">
+                <button class="comments__button" type="submit">
+                    <span>Enviar</span>
+                </button>
+            </div>
+        </form>
+    {% endif %}
+
+</div>

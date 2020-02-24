@@ -1,0 +1,65 @@
+<footer class="footer">
+    
+    <div class="footer__container">
+        <div class="footer__row">
+
+            <div class="footer__box footer__box--institutional">
+                <h3 class="footer__title">{{ Translation('institucional') }}</h3>
+                <ul class="footer__box--ul">
+                    {% for link in settings.institutional %}
+                        {% if link.url != "" and link.name != "" %}
+                            <li class="footer__box--item">
+                                <a href="{{ link.url }}" class="footer__link">{{ link.name }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                {% element 'snippets/socials' { modifier: 'footer' } %}
+            </div>
+       
+            <div class="footer__box footer__box--help">
+                <h3 class="footer__title">Ajuda</h3>
+                <ul class="footer__box--ul">
+                    {% for link in settings.help %}
+                        {% if link.url != "" and link.name != "" %}
+                            <li class="footer__box--item">
+                                <a href="{{ link.url }}" class="footer__link">{{ link.name }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__title">Atendimento</h3>
+
+                {% element 'snippets/attendance' { modifier: 'footer' } %}
+            </div>
+            
+            <div class="footer__box  footer__box--payments">   
+                <h3 class="footer__title ">{{ Translation('pagamento') }}</h3>
+                {% element 'snippets/payments' %}
+            </div>
+
+
+            <div class="footer__box">
+                <h3 class="footer__title">{{ Translation('seguranca') }}</h3>
+                
+                {% if seals.ebit or seals.hackersafe %}
+                    <ul class="foo-seals">
+                        {% if seals.ebit %}
+                            <li class="seal-ebit pull-left">{{ seals.ebit }}</li>
+                        {% endif %}
+                        {% if seals.hackersafe %}
+                            <li>{{ seals.hackersafe }}</li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+                <p class="procon"><a href="http://www.procon.sc.gov.br/" target="_blank"><img src="http://images.tcdn.com.br/678114/themes/55/img/logo-procon.png" alt="Procon-SC"></a></p>
+
+            </div>
+
+        </div>
+    </div>
+</footer>

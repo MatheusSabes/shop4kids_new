@@ -1,0 +1,73 @@
+.showcase 
+    margin: 50px 0
+
+    &__header 
+        padding: 30px 0 20px
+        margin-bottom: 20px 
+
+    &__title 
+        font-size 35px
+        font-weight normal
+        line-height normal
+        letter-spacing 0.49px
+        color color
+        text-align: center
+
+    &__list 
+        display: flex 
+        justify-content: space-between
+        align-items: stretch
+        flex-flow: row wrap
+        min-width: 100%
+
+        margin: 0px (-(30px / 2))
+
+        & > button
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAaCAYAAAC+aNwHAAAAAXNSR0IArs4c6QAAAQZJREFUOBFjYICASCC1GYgToXySKHmg6r9A/B+KK0jSDVQsDcR/oJphhrSRakgGmgEggzpINSRzUBvSA3QdIylewuad6QNiSDzQVuQ0Aoodkl0STStDFgINZmACEWSClaTqSwNqQA8PL2INAWUwWD6B0XOBYgTTBkhBNxbNvcRoZgYqmo1Fcw1QjCBgA6pYDcQw54JokP+zgJgg4AKq2AXEyJp/AfmgUosgEACqOA7EyJq/AflEhbYkUOFlNM0fgXxbICYIlIAq7gAxss2vgXwDgjqBCpSB+AkQI2t+COSrADFRoAWoClnzNSBfhiidUEVhSAacBrJFSdEMU+sGZCQBMSgKSQIA1Ptxf8zSLEQAAAAASUVORK5CYII=')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: initial
+            background-color: transparent
+            font-size: 0
+            width: 47px
+            height: 47px
+            padding: 0
+            min-width: initial
+            border solid 1px #bcbbba
+            border-radius 40px
+            &[class*=prev]
+                transform rotate(180deg) translateY(50%)
+    &__item 
+        flex: 0 0 25%
+        border-radius: 15px
+
+    @media(max-width: 991px)
+        .slick-list
+            padding: 0 15px
+
+@media (min-width: (1300px + 100))
+    .showcase 
+        .slick-prev 
+            left: -50px
+        .slick-next 
+            right: -50px
+
+
+@media desktop 
+    .showcase
+        &__item
+            margin: 20px 13px 
+
+            &:hover
+                box-shadow: 0 0 21px rgba(0, 0, 0, 0.15);
+
+                .product
+                    &__image
+                        display: none!important
+
+                        &--hover
+                            display: block!important
+                    
+                    &__actions
+                        opacity 1
+                        visibility: visible

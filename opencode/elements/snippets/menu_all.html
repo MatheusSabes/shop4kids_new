@@ -1,0 +1,36 @@
+{# Configuração do limite de Nivel #}
+{% if not settings.nivelLimit %}
+{% set nivelLimit = 999 %}
+{% endif %}
+
+{# Configuração de primeiro nivel #}
+{% if not nivel %}{% set nivel = 1 %}{% endif %}
+{% if not menu %}{% set menu = categories %}{% endif %}
+
+{% set class = '' %}
+{% if modifier %}{% set class =  ' menu--' ~ modifier %}{% endif %}
+
+{% set notCategories = settings.notCategories | split(',') %}
+
+<div class="menu menu--all-{{ nivel }}{{ class }}{{ nivel > 1 ? ' menu--sub' : '' }}">
+    
+    <ul class="menu__ul menu__ul--all-{{ nivel }}">
+        {% for category in menu %}
+        {% set hasChild = '' %}
+
+        {% if not (category.id in notCategories) %}
+        {% if category.children and nivel < nivelLimit %} {% set hasChild = ' menu__item--has-child' %}{% endif %}
+        <li class="menu__item menu__item--all-{{ nivel }}{{ hasChild }}">
+            <a href="{{ category.link }}" class="menu__link menu__link--all-{{ nivel }}"
+                data-tray-tst="categoria_lvl_{{ nivel }}">
+                <span class="menu__label">{{ category.name }}</span>
+            </a>
+            {% if category.children and nivel < nivelLimit %}
+            {% element 'snippets/menu_all' { menu: category.children, nivel: (nivel + 1) } %}
+            {% endif %}
+        </li>
+        {% endif %}
+
+        {% endfor %}
+    </ul>
+</div>

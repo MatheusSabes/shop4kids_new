@@ -1,0 +1,51 @@
+.rulers  
+    background: #009fd2
+    
+    &__container
+        @extend $container
+
+    &__list
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        height 48px
+        @media screen and (min-width: 993px)
+            display: flex !important
+            & .slick-track
+                display: flex
+        & button
+          
+            &[class*=prev]
+                transform rotate(180deg) translateY(50%)
+    &__box
+        display: flex 
+        justify-content: center
+        align-items: center 
+        padding: 5px 10px 
+        text-align: left
+
+    &__item
+        flex: 1 
+        min-width 0px
+
+    &__icon
+        display flex
+        align-items center
+        margin-right 10px
+        svg
+            fill: #fff
+            width initial
+            height initial
+
+    &__title
+        &, & strong 
+            font-family Montserrat
+            font-size 14px
+            font-weight 400
+            font-stretch normal
+            font-style normal
+            line-height normal
+            letter-spacing normal
+            color #ffffff
+
+
