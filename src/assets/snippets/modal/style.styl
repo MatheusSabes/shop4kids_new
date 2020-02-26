@@ -21,10 +21,29 @@
     //     margin: 20px auto 
 
 .modal-content
-    border-radius: 0
+    border-radius: 10px
     box-shadow: none 
     text-align: left 
-
+    & .cart-preview-item-delete
+        font-size 0
+        width: 18px
+        height 22px
+        display flex
+        justify-content center
+        align-items center
+        margin-left: 10px
+        transition: all 200ms linear
+        &:hover
+            transform: translateY(-3px)
+        &:before
+            content ''
+            background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBzdHlsZT0iZmlsbDojY2YzNzJjOyIgZD0iTTMgNnYxOGgxOHYtMThoLTE4em01IDE0YzAgLjU1Mi0uNDQ4IDEtMSAxcy0xLS40NDgtMS0xdi0xMGMwLS41NTIuNDQ4LTEgMS0xczEgLjQ0OCAxIDF2MTB6bTUgMGMwIC41NTItLjQ0OCAxLTEgMXMtMS0uNDQ4LTEtMXYtMTBjMC0uNTUyLjQ0OC0xIDEtMXMxIC40NDggMSAxdjEwem01IDBjMCAuNTUyLS40NDggMS0xIDFzLTEtLjQ0OC0xLTF2LTEwYzAtLjU1Mi40NDgtMSAxLTFzMSAuNDQ4IDEgMXYxMHptNC0xOHYyaC0yMHYtMmg1LjcxMWMuOSAwIDEuNjMxLTEuMDk5IDEuNjMxLTJoNS4zMTVjMCAuOTAxLjczIDIgMS42MzEgMmg1LjcxMnoiLz48L3N2Zz4=')
+            background-size 100%
+            background-repeat no-repeat
+            background-position center
+            display: inline-block
+            width: 100%
+            height 100%
     .page-simula-frete
         > p 
             font-size: 11px

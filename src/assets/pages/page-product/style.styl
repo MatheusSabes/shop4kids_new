@@ -437,11 +437,13 @@
 #Aba3
     display: none !important
 
-.botao-commerce.botao-prosseguir-compra.pointer.right,  
+
 #button-buy
     background: #6bcf60
     border: none!important
     padding 0
+    
+
     >.botao-commerce-img
         border: none!important
         display flex
@@ -449,7 +451,7 @@
         justify-content: center
         font-family Montserrat
         font-size 21.5px
-        font-weight 600
+        font-weight bold
         font-stretch normal
         font-style normal
         line-height normal
@@ -476,6 +478,42 @@
             height 34px
             margin-right 13px
 
+.modal-footer
+    & .botao-continuar-comprando
+        width: 200px
+        height 40px
+        background none
+        background-color: #ff6b6b
+        border: 0
+        display flex
+        justify-content center
+        align-items center
+        padding: 5px
+        & .botao-commerce-img
+            font-family Montserrat
+            font-size 14px
+            font-weight: 400
+            color: #ffffff
+            text-transform: initial
+            text-align: left 
+            white-space nowrap
+    & .botao-prosseguir-compra
+        width: 160px
+        height 40px
+        background none
+        background-color: #6bcf60
+        border: 0
+        display flex
+        justify-content center
+        align-items center
+        padding: 5px
+        >.botao-commerce-img 
+            font-family Montserrat
+            font-size 16px
+            font-weight: 400
+            color: #ffffff
+            text-transform: initial
+            text-align: left 
 @media desktop
     .page-product 
         &__essential 

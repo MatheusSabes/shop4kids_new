@@ -31,3 +31,17 @@ if (jQuery('.rulers__list')) {
         ]
     });
 }
+
+console.log('Botao do filtro: ');
+if (window.matchMedia("(max-width:993px)").matches) {
+    var buttonFilter = document.querySelector('.button__filter')
+
+    if (buttonFilter) {
+        jQuery(buttonFilter).click(function (e) {
+            console.log('Entrei no botao');
+
+            e.preventDefault();
+            $(this).parent().find('.page-catalog__filters').toggleClass('showFilter')
+        });
+    }
+}

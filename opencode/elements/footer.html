@@ -36,16 +36,13 @@
 
                 {% element 'snippets/attendance' { modifier: 'footer' } %}
             </div>
-            
-            <div class="footer__box  footer__box--payments">   
-                <h3 class="footer__title ">{{ Translation('pagamento') }}</h3>
+
+
+            <div class="footer__box footer__box--paymentsecurity">
+                <h3 class="footer__title">{{ Translation('pagamento') }}</h3>
                 {% element 'snippets/payments' %}
-            </div>
 
-
-            <div class="footer__box">
-                <h3 class="footer__title">{{ Translation('seguranca') }}</h3>
-                
+                <h3 class="footer__title title-security">{{ Translation('seguranca') }}</h3>
                 {% if seals.ebit or seals.hackersafe %}
                     <ul class="foo-seals">
                         {% if seals.ebit %}
@@ -54,10 +51,15 @@
                         {% if seals.hackersafe %}
                             <li>{{ seals.hackersafe }}</li>
                         {% endif %}
+
+                        <li>
+                            <a href="http://www.procon.sc.gov.br/" target="_blank"><img src="http://images.tcdn.com.br/678114/themes/55/img/logo-procon.png" alt="Procon-SC"></a>
+                        </li>
+                        <li>
+                            <a href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fwww.shop4kids.com.br%2F&hl=pt-PT" target="_blank"><img src="{{ asset('img/google-seal.png') }}" alt="Sabe Browsing Google"></a>
+                        </li>
                     </ul>
                 {% endif %}
-                <p class="procon"><a href="http://www.procon.sc.gov.br/" target="_blank"><img src="http://images.tcdn.com.br/678114/themes/55/img/logo-procon.png" alt="Procon-SC"></a></p>
-
             </div>
 
         </div>

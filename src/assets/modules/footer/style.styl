@@ -17,6 +17,31 @@
         @media screen and (max-width: 992px)
             justify-content center
             flex 0 1 100%
+        &--paymentsecurity
+            display flex
+            flex-direction column
+            flex 1
+            & h3
+                font-family Montserrat
+                font-size 16px
+                font-weight 600
+                font-stretch normal
+                font-style normal
+                line-height 1.19
+                letter-spacing normal
+                color #211915
+                margin-bottom 18px
+                &.title-security
+                    margin-top 18px
+        & .foo-seals
+            display flex
+            flex-wrap: wrap
+            align-items: center
+            & li
+                &:not(:last-child)
+                    margin-right 20px
+            & img
+                max-width: 140px
         &--item
             font-family Montserrat
             font-size 14px

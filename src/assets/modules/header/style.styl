@@ -9,11 +9,14 @@
     margin-bottom: 45px
     background: #fff
     transition: all .2s ease-in-out
-    
+    @media screen and (max-width: 420px)
+        height 150px
     [data-scrolling-mode=down] &
         border-bottom-style: solid
         border-bottom-width: 1px
         box-shadow: 0 0 10px rgba(0,0,0,.1)
+        @media screen and (max-width: 420px)
+            height initial
 
     &__attendance 
         display: none 
@@ -109,6 +112,11 @@
         width: 100% 
         z-index: 1
         transition: all .2s ease-in-out
+        @media screen and (max-width: 420px)
+            position relative
+            margin 0 auto
+            margin-left: auto !important
+            order: 3
         &--catalog
             margin-left 20px
             & .search
