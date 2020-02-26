@@ -25,7 +25,7 @@
                 {% set hasChild = '' %}
                 {% if category.name != 'Promoções' %}
                     {% if category.children and nivel < nivelLimit %} {% set hasChild = ' menu__item--has-child' %}{% endif %}
-                    <li class="menu__item menu__item--nv{{ nivel }}{{ hasChild }}">
+                    <li class="menu__item menu__item--nv{{ nivel }}{{ hasChild }} {% if category.name == 'Atacado' %}menu__item--atacado{% endif %}">
                         <a href="{{ category.link }}" class="menu__link menu__link--nv{{ nivel }}" data-tray-tst="categoria_lvl_{{ nivel }}">
                             {% if nivel == 1 and pages.current == 'catalog' %}
                                 {% if category.images[0] %}
