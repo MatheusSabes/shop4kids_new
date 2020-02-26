@@ -55,17 +55,7 @@
               <ul>
               {% for item in myFilter.items %}
                   <li>
-                      {% if item.type == "link" %}
-                          <a href="{{ item.url }}">{{ item.title }}</a>
-                      {% endif %}
-  
-                      {% if item.type == "checkbox" %}
-                          <label>
-                              {% set checked = item.applied ? 'checked="checked"' %}
-                              <input type="checkbox" name="{{ item.name }}" value="{{ item.value }}" {{ checked }} />
-                              {{ item.title }}
-                          </label>
-                      {% endif %}
+                      <a href="{{ item.url }}">{{ item.title }}</a>
                   </li>
               {% endfor %}
               </ul>
@@ -78,17 +68,7 @@
                  <ul>
                      {% for item in var.items %}
                      <li>
-                         {% if item.type == "link" %}
                          <a href="{{ item.url }}">{{ item.title }}</a>
-                         {% endif %}
-  
-                         {% if item.type == "checkbox" %}
-                         <label>
-                             {% set checked = item.applied ? 'checked="checked"' %}
-                             <input type="checkbox" name="{{ item.name }}" value="{{ item.value }}" {{ checked }} />
-                             {{ item.title }}
-                         </label>
-                         {% endif %}
                      </li>
                      {% endfor %}
                  </ul>

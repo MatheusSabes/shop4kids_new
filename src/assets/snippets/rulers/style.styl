@@ -9,12 +9,19 @@
         align-items: center
         justify-content: flex-start
         height 48px
+        @media screen and (max-width: 420px)
+            & > div
+                &, & > div
+                    height 100%
         @media screen and (min-width: 993px)
             display: flex !important
             & .slick-track
                 display: flex
         & button
-          
+            @media screen and (max-width: 420px)
+                width: 25px
+                height 25px
+                background-size: auto 15px
             &[class*=prev]
                 transform rotate(180deg) translateY(50%)
     &__box
@@ -27,7 +34,11 @@
     &__item
         flex: 1 
         min-width 0px
-
+        @media screen and (max-width: 420px)
+            height 100%
+            display: flex !important
+            justify-content: center
+            align-items: center
     &__icon
         display flex
         align-items center
