@@ -84,6 +84,24 @@
         margin-left: 15px
         & .button_close--filter
             display: none
+        & .filtro-aplicado
+            & > ul
+                & > li
+                    & > a
+                        display: flex
+                        align-items: center
+                        & > span
+                            display: flex
+                            align-items: center
+                            margin-left: 10px
+                            & svg
+                                width: 10px
+                                height 10px
+                                &:hover
+                                    & path
+                                        fill #ff6b6b
+        & .button.button_mask.button_mask--filter
+            display: none
         @media screen and (max-width: 992px)
             & .fechar-filtros
                 font-size: 0

@@ -489,6 +489,282 @@
             </li>
             <!-- fim vitrine -->
 
+            <!-- filtro menu -->
+            <li class="uk-card uk-card-default uk-card-body uk-margin">
+                <a class="uk-accordion-title" href="#">
+                    Filtro Menu
+                </a>
+                <div class="uk-accordion-content">
+
+                    <ul class="uk-flex-center uk-tab" uk-tab="">
+                        <li aria-expanded="true" class="uk-active"><a href="">Tamanho</a></li>
+                        <li aria-expanded="false" class=""><a href="">Idade</a></li>
+                        <li aria-expanded="false" class=""><a href="">Marca</a></li>
+                        <li aria-expanded="false" class=""><a href="">Estação do Ano</a></li>
+                        <li aria-expanded="false" class=""><a href="">Faixas de Preço</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <!--TAMANHO-->
+                        <li uk-switcher-item="0" class="uk-active">
+                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                <!-- Tamanho -->
+                                <div class="uk-width-1-1@m">
+                                    <div class="uk-card uk-card-body">
+
+                                        <h5 class="uk-h5 uk-margin-small">Tamanho</h5>
+                                        <label for="filter_tam_1" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" name="filter_tam_1_title" placeholder="Titulo Item - 1">
+                                            <input type="text" class="uk-input" id="filter_tam_1" name="filter_tam_1" placeholder="Link Item 1">
+                                        </label>
+
+                                        <label for="filter-tam-2" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-tam-2-title" name="filter_tam_2_title" placeholder="Titulo Item - 2">
+                                            <input type="text" class="uk-input" id="filter-tam-2" name="filter_tam_2" placeholder="Link Item 2">
+                                        </label>
+                                        <label for="filter-tam-3" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-tam-3-title" name="filter_tam_3_title" placeholder="Titulo Item - 3">
+                                            <input type="text" class="uk-input" id="filter-tam-3" name="filter_tam_3" placeholder="Link Item 3">
+                                        </label>
+                                        <label for="filter-tam-4" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-tam-4-title" name="filter_tam_4_title" placeholder="Titulo Item - 4">
+                                            <input type="text" class="uk-input" id="filter-tam-4" name="filter_tam_4" placeholder="Link Item 4">
+                                        </label>
+                                        <label for="filter-tam-5" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-tam-5-title" name="filter_tam_5_title" placeholder="Titulo Item - 5">
+                                            <input type="text" class="uk-input" id="filter-tam-5" name="filter_tam_5" placeholder="Link Item 5">
+                                        </label>
+                                        <label for="filter-tam-6" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-tam-6-title" name="filter_tam_6_title" placeholder="Titulo Item - 6">
+                                            <input type="text" class="uk-input" id="filter-tam-6" name="filter_tam_6" placeholder="Link Item 6">
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- end Tamanho -->
+                            </div>
+
+                        </li>
+
+                        <!--Idade-->
+                        <li uk-switcher-item="1" class="">
+                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                <!-- Tamanho -->
+                                <div class="uk-width-1-1@m">
+                                    <div class="uk-card uk-card-body">
+
+                                        <h5 class="uk-h5 uk-margin-small">Idade</h5>
+                                        <label for="filter-ida-1" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-ida-1-title" name="filter_ida_1_title" placeholder="Titulo Item - 1">
+                                            <input type="text" class="uk-input" id="filter-ida-1" name="filter_ida_1" placeholder="Link Item 1">
+                                        </label>
+
+                                        <label for="filter-ida-2" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-ida-2-title" name="filter_ida_2_title" placeholder="Titulo Item - 2">
+                                            <input type="text" class="uk-input" id="filter-ida-2" name="filter_ida_2" placeholder="Link Item 2">
+                                        </label>
+                                        <label for="filter-ida-3" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-ida-3-title" name="filter_ida_3_title" placeholder="Titulo Item - 3">
+                                            <input type="text" class="uk-input" id="filter-ida-3" name="filter_ida_3" placeholder="Link Item 3">
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- end Tamanho -->
+                            </div>
+
+                        </li>
+
+                        <!--MARCAS-->
+                        <li uk-switcher-item="2" class="">
+                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                <!-- Marcas -->
+                                <div class="uk-width-1-3@m">
+                                    <div class="uk-card uk-card-body">
+                                        <div class="uk-margin-bottom">
+                                            <div uk-form-custom="target: true" class="brand__form">
+                                                <input type="file" name="filter-marc-1-img" class="input-brand">
+                                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small"
+                                                    placeholder="Selecione um arquivo" disabled>
+                                            </div>
+
+                                            <div class="uk-inline brand__link">
+                                                <input type="text" class="uk-input input-ghost" name="filter-marc-1"
+                                                    placeholder="Link da marca">
+                                            </div>
+                                            <button type="button" class="uk-button uk-button-danger brand__remove">
+                                                Remover
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="uk-width-1-3@m">
+                                    <div class="uk-card uk-card-body">
+                                        <div class="uk-margin-bottom">
+                                            <div uk-form-custom="target: true" class="brand__form">
+                                                <input type="file" name="filter-marc-2-img" class="input-brand">
+                                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small"
+                                                    placeholder="Selecione um arquivo" disabled>
+                                            </div>
+
+                                            <div class="uk-inline brand__link">
+                                                <input type="text" class="uk-input input-ghost" name="filter-marc-2"
+                                                    placeholder="Link da marca">
+                                            </div>
+                                            <button type="button" class="uk-button uk-button-danger brand__remove">
+                                                Remover
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="uk-width-1-3@m">
+                                    <div class="uk-card uk-card-body">
+                                        <div class="uk-margin-bottom">
+                                            <div uk-form-custom="target: true" class="brand__form">
+                                                <input type="file" name="filter-marc-3-img" class="input-brand">
+                                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small"
+                                                    placeholder="Selecione um arquivo" disabled>
+                                            </div>
+
+                                            <div class="uk-inline brand__link">
+                                                <input type="text" class="uk-input input-ghost" name="filter-marc-3"
+                                                    placeholder="Link da marca">
+                                            </div>
+                                            <button type="button" class="uk-button uk-button-danger brand__remove">
+                                                Remover
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="uk-width-1-3@m">
+                                    <div class="uk-card uk-card-body">
+                                        <div class="uk-margin-bottom">
+                                            <div uk-form-custom="target: true" class="brand__form">
+                                                <input type="file" name="filter-marc-4-img" class="input-brand">
+                                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small"
+                                                    placeholder="Selecione um arquivo" disabled>
+                                            </div>
+
+                                            <div class="uk-inline brand__link">
+                                                <input type="text" class="uk-input input-ghost" name="filter-marc-5"
+                                                    placeholder="Link da marca">
+                                            </div>
+                                            <button type="button" class="uk-button uk-button-danger brand__remove">
+                                                Remover
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="uk-width-1-3@m">
+                                    <div class="uk-card uk-card-body">
+                                        <div class="uk-margin-bottom">
+                                            <div uk-form-custom="target: true" class="brand__form">
+                                                <input type="file" name="filter-marc-5-img" class="input-brand">
+                                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small"
+                                                    placeholder="Selecione um arquivo" disabled>
+                                            </div>
+
+                                            <div class="uk-inline brand__link">
+                                                <input type="text" class="uk-input input-ghost" name="filter-marc-5"
+                                                    placeholder="Link da marca">
+                                            </div>
+                                            <button type="button" class="uk-button uk-button-danger brand__remove">
+                                                Remover
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="uk-width-1-3@m">
+                                    <div class="uk-card uk-card-body">
+                                        <div class="uk-margin-bottom">
+                                            <div uk-form-custom="target: true" class="brand__form">
+                                                <input type="file" name="filter-marc-6-img" class="input-brand">
+                                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small"
+                                                    placeholder="Selecione um arquivo" disabled>
+                                            </div>
+
+                                            <div class="uk-inline brand__link">
+                                                <input type="text" class="uk-input input-ghost" name="filter-marc-6"
+                                                    placeholder="Link da marca">
+                                            </div>
+                                            <button type="button" class="uk-button uk-button-danger brand__remove">
+                                                Remover
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Marcas -->
+                            </div>
+
+                        </li>
+
+                        <!--Estação do Ano-->
+                        <li uk-switcher-item="3" class="">
+                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                <!-- Estação do Ano -->
+                                <div class="uk-width-1-1@m">
+                                    <div class="uk-card uk-card-body">
+
+                                        <h5 class="uk-h5 uk-margin-small">Estação do Ano</h5>
+                                        <label for="filter-esta-1" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-esta-1-title" name="filter_esta_1_title" placeholder="Titulo Item - 1">
+                                            <input type="text" class="uk-input" id="filter-esta-1" name="filter_esta_1" placeholder="Link Item 1">
+                                        </label>
+
+                                        <label for="filter-esta-2" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-esta-2-title" name="filter_esta_2_title" placeholder="Titulo Item - 2">
+                                            <input type="text" class="uk-input" id="filter-esta-2" name="filter_esta_2" placeholder="Link Item 2">
+                                        </label>
+                                        <label for="filter-esta-3" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-esta-3-title" name="filter_esta_3_title" placeholder="Titulo Item - 3">
+                                            <input type="text" class="uk-input" id="filter-esta-3" name="filter_esta_3" placeholder="Link Item 3">
+                                        </label>
+                                        <label for="filter-esta-4" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-esta-4-title" name="filter_esta_4" placeholder="Titulo Item - 4">
+                                            <input type="text" class="uk-input" id="filter-esta-4" name="filter_esta_5" placeholder="Link Item 4">
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- end Estação do Ano -->
+                            </div>
+
+                        </li>
+
+                        <!--Faixas de preço-->
+                        <li uk-switcher-item="4" class="">
+                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                <!-- Faixas de Preço -->
+                                <div class="uk-width-1-1@m">
+                                    <div class="uk-card uk-card-body">
+
+                                        <h5 class="uk-h5 uk-margin-small">Faixas de Preço</h5>
+                                        <label for="filter-faix-1" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-faix-1-title" name="filter-faix-1-title" placeholder="Titulo Item - 1">
+                                            <input type="text" class="uk-input" id="filter-faix-1" name="filter-faix-1" placeholder="Link Item 1">
+                                        </label>
+
+                                        <label for="filter-faix-2" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-faix-2-title" name="filter-faix-2-title" placeholder="Titulo Item - 2">
+                                            <input type="text" class="uk-input" id="filter-faix-2" name="filter-faix-2" placeholder="Link Item 2">
+                                        </label>
+                                        <label for="filter-faix-3" class="uk-margin-medium-bottom">
+                                            <input type="text" class="uk-input" id="filter-faix-3-title" name="filter-faix-3-title" placeholder="Titulo Item - 3">
+                                            <input type="text" class="uk-input" id="filter-faix-3" name="filter-faix-3" placeholder="Link Item 3">
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- end Faixas de Preço -->
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!--FIM FILTRO MENU-->
+
             <!-- Banner regua -->
             <li class="uk-card uk-card-default uk-card-body uk-margin">
                 <a class="uk-accordion-title" href="#">
