@@ -81,9 +81,9 @@
         <div class="menu__filter__faixas--container">
             <small>Faixas de preço</small>
             <article>
-                <a href="#" class="menu__filter__faixas--item">De R$ 8,58 a R$ 19,98</a>
-                <a href="#" class="menu__filter__faixas--item">De R$ 19,99 a R$ 30,98</a>
-                <a href="#" class="menu__filter__faixas--item">De R$ 30,99 a R$ 56,98</a>
+                <a href="{{ settings.filter_faix_1 }}" class="menu__filter__faixas--item">{{ settings.filter_faix_1_title }}</a>
+                <a href="{{ settings.filter_faix_2 }}" class="menu__filter__faixas--item">{{ settings.filter_faix_2_title }}</a>
+                <a href="{{ settings.filter_faix_3 }}" class="menu__filter__faixas--item">{{ settings.filter_faix_3_title }}</a>
             </article>
         </div>
     </div>
@@ -98,10 +98,48 @@
         <small>Marcas</small>
         <!--FILTRO MARCAS-->
         <article>
-            <a href="#" class="menu__filter__marcas--item"><img src="https://via.placeholder.com/85x35" alt=""></a>
-            <a href="#" class="menu__filter__marcas--item"><img src="https://via.placeholder.com/85x35" alt=""></a>
-            <a href="#" class="menu__filter__marcas--item"><img src="https://via.placeholder.com/85x35" alt=""></a>
-            <a href="#" class="menu__filter__marcas--item"><img src="https://via.placeholder.com/85x35" alt=""></a>
+            <a href="{{ settings.filter_marc_1 }}" class="menu__filter__marcas--item">
+                {% if settings.filter_marc_1_img %}
+                    <img src="{{ asset(settings.filter_marc_1_img) }}" alt="">
+                {% else %}
+                    <img src="https://via.placeholder.com/85x35" alt="">
+                {% endif %}
+            </a>
+            <a href="{{ settings.filter_marc_2 }}" class="menu__filter__marcas--item">
+                {% if settings.filter_marc_2_img %}
+                    <img src="{{ asset(settings.filter_marc_2_img) }}" alt="">
+                {% else %}
+                    <img src="https://via.placeholder.com/85x35" alt="">
+                {% endif %}
+            </a>
+            <a href="{{ settings.filter_marc_3 }}" class="menu__filter__marcas--item">
+                {% if settings.filter_marc_3_img %}
+                    <img src="{{ asset(settings.filter_marc_3_img) }}" alt="">
+                {% else %}
+                    <img src="https://via.placeholder.com/85x35" alt="">
+                {% endif %}
+            </a>
+            <a href="{{ settings.filter_marc_4 }}" class="menu__filter__marcas--item">
+                {% if settings.filter_marc_4_img %}
+                    <img src="{{ asset(settings.filter_marc_4_img) }}" alt="">
+                {% else %}
+                    <img src="https://via.placeholder.com/85x35" alt="">
+                {% endif %}
+            </a>
+            <a href="{{ settings.filter_marc_5 }}" class="menu__filter__marcas--item">
+                {% if settings.filter_marc_5_img %}
+                    <img src="{{ asset(settings.filter_marc_5_img) }}" alt="">
+                {% else %}
+                    <img src="https://via.placeholder.com/85x35" alt="">
+                {% endif %}
+            </a>
+            <a href="{{ settings.filter_marc_6 }}" class="menu__filter__marcas--item">
+                {% if settings.filter_marc_6_img %}
+                    <img src="{{ asset(settings.filter_marc_6_img) }}" alt="">
+                {% else %}
+                    <img src="https://via.placeholder.com/85x35" alt="">
+                {% endif %}
+            </a>
         </article>
     </footer>
     {% endif %}
