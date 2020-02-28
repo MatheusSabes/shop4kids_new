@@ -1,8 +1,33 @@
 .newsletter 
     padding: (gutter/2) 0
     margin-bottom 50px
+    position relative
+    padding-top: 100px
     @media screen and (max-width: 992px)
         background-image: none !important
+    &__kids
+        position: absolute
+        left 50%
+        top 50%
+        transform: translate(-50%, -50%)
+        z-index 0
+        display: flex
+        justify-content: center
+        align-items: center
+        & img
+            margin-left: -12px
+        &--girl
+            position: absolute
+            left -226px
+            bottom: 10px
+            @media screen and (max-width: 992px)
+                display: none
+        &--man
+            position: absolute
+            right -166px
+            bottom: 10px
+            @media screen and (max-width: 992px)
+                display: none
     &__container 
         max-width: 632px
         padding: 30px
@@ -12,6 +37,8 @@
         background-color: #ffffff
         border-radius: 15px
         margin-bottom: -30px
+        position relative
+        z-index: 1
     &__header 
         display: flex 
         align-items: center
@@ -45,10 +72,10 @@
                 font-size 14px
                 font-weight normal
                 font-stretch normal
-                font-style normal
+                font-style italic
                 line-height 10px
                 letter-spacing normal
-                color #211915
+                color #848484
     &__box, &__actions
         padding: 5px 
      

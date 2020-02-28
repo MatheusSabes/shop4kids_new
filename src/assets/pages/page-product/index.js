@@ -1,3 +1,13 @@
+document.querySelectorAll('a[href^="#ProdAbas"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector('#ProdAbas').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 if (jQuery('.related__list')) {
     jQuery('.related__list').each(function () {
         jQuery(this).find('.showcase__item--empty').remove();

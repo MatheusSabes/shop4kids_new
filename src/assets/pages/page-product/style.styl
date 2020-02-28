@@ -340,6 +340,7 @@
             margin: 0 (30px / 2) 0 0
             border: 0
             max-width: 112px
+            max-height: 47px
             flex: 0 0 auto
             display: flex
             justify-content space-between
@@ -390,12 +391,15 @@
             font-weight: 100
             line-height: normal
         
-
+.related__list
+    border-bottom: 1px solid #ccc
 .texto_variacao
     display: flex 
     padding: 0
     @media screen and (max-width: 992px)
         justify-content center
+    & > span
+        display: none
     h2, span
         float: none 
         width: auto
@@ -442,7 +446,7 @@
     background: #6bcf60
     border: none!important
     padding 0
-    
+    height 64px
 
     >.botao-commerce-img
         border: none!important
@@ -458,6 +462,7 @@
         letter-spacing normal
         color #ffffff
         margin 0 auto
+        height 64px
         @media screen and (max-width: 992px)
             font-family Montserrat
             font-size 18.9px

@@ -1,7 +1,8 @@
 <section class="newsletter" data-tray-tst="newsletter_box"
 style="background:url('https://images.tcdn.com.br/678114/themes/101/img/settings/newsletterbg.png?328d0846cc7657319cc2a34a2954f7601582493961') no-repeat top center fixed; background-size: cover;">
-
     <div class="newsletter__container">
+        <span class="newsletter__kids--girl"><img src="{{ asset('img/kid_girl.png') }}" alt="Kids Shop4Kids"></span>
+        <span class="newsletter__kids--man"><img src="{{ asset('img/kid_man.png') }}" alt="Kids Shop4Kids"></span>
         <header class="newsletter__header">
             {% if settings.newsletter_title %}
                 <h1 class="newsletter__title">{{ settings.newsletter_title }}</h1>
@@ -25,7 +26,7 @@ style="background:url('https://images.tcdn.com.br/678114/themes/101/img/settings
                     <input class="newsletter__input" name="email" type="email"id="email" placeholder="Seu e-mail" data-tray-tst="newsletter_email" required>
                 </div>
                 <div class="newsletter__actions">
-                    <button class="newsletter__button" data-tray-tst="newsletter_cadastrar">Enviar</button>
+                    <button class="newsletter__button" data-tray-tst="newsletter_cadastrar">Cadastrar</button>
                 </div>
             </form>
         </div>
