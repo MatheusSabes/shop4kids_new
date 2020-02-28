@@ -23,7 +23,8 @@
         <ul class="menu__ul menu__ul--nv{{ nivel }}">
             {% for category in menu %}
                 {% set hasChild = '' %}
-                {% if category.name != 'Promoções' %}
+                {% if category.name != 'Promoções'  %}
+                {% if category.name != 'Atacado'  %}
                     {% if category.children and nivel < nivelLimit %} {% set hasChild = ' menu__item--has-child' %}{% endif %}
                     <li class="menu__item menu__item--nv{{ nivel }}{{ hasChild }} {% if category.name == 'Atacado' %}menu__item--atacado{% endif %}">
                         <a href="{{ category.link }}" class="menu__link menu__link--nv{{ nivel }}" data-tray-tst="categoria_lvl_{{ nivel }}">
@@ -34,7 +35,15 @@
                         {% endif %}
                     </li>
                 {% endif %}
+                {% endif %}
             {% endfor %} 
+            {% if nivel == 1 %}
+            <li class="menu__item--atacado">
+                <a href="https://www.shop4kids.com.br/atacados" class="menu__link menu__link--nv{{ nivel }}" data-tray-tst="categoria_lvl_{{ nivel }}">
+                    <span class="menu__label">Atacado</span>
+                </a>
+            </li>
+            {% endif %}
         </ul>
     {% if nivel > 1 and nivel < 3 %}
         <!--FILTRO TAMANHO-->
