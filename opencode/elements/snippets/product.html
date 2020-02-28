@@ -53,10 +53,13 @@
     </div>
 
     <div class="product__actions" data-product="{{ product.id }}" data-variant-id="">
-        <div class="product__quantity">
-            <button type="button" id="minus" class="product__quantity--button" data-cart="less" onclick="quantityCart(-1, this)">-</button>
-            <input type="text" class="product__quantity--input" data-cart="quantity" data-qtde="quantidade" name="qty" value="1" size="2">
-            <button type="button" id="plus" class="product__quantity--button" data-cart="more" onclick="quantityCart(1, this)">+</button>
+        <div>
+            <span>Qtd.</span>
+            <div class="product__quantity">
+                <button type="button" id="minus" class="product__quantity--button" data-cart="less" onclick="quantityCart(-1, this)">-</button>
+                <input type="text" class="product__quantity--input" data-cart="quantity" data-qtde="quantidade" name="qty" value="1" size="2">
+                <button type="button" id="plus" class="product__quantity--button" data-cart="more" onclick="quantityCart(1, this)">+</button>
+            </div>
         </div>
 
         <button type="button" class="product__buy--button  buy__button" data-cart="buy">

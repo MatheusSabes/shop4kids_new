@@ -21,8 +21,6 @@ if (jQuery('.related__list')) {
                 {
                     breakpoint: 426,
                     settings: {
-                        arrows: false,
-                        dots: true,
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }

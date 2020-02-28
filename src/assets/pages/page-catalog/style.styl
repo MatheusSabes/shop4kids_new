@@ -1,6 +1,22 @@
 .page-catalog 
-    & .showcase__item
-        flex: 0 0 30.333333333%
+    & .showcase
+        margin 0px
+        margin-top: 50px
+        margin-bottom: 20px
+
+        &__list
+            display: flex
+            flex-wrap: wrap
+
+            @media mobile 
+                justify-content: center
+
+        &__item
+            flex: 0 0 30.333333333%
+
+            @media mobile 
+                flex: 0 0 50%
+
     & .breadcrumb
         height 50px
         border-bottom: 0

@@ -330,6 +330,7 @@
     &__actions 
         .passo1, #product-form-box
             display: flex 
+            align-items: flex-end
 
         #product-form-box
             width: 100% 
@@ -393,6 +394,10 @@
         
 .related__list
     border-bottom: 1px solid #ccc
+
+    button[class*=prev]
+        transform: rotate(180deg) translateY(50%)
+        
 .texto_variacao
     display: flex 
     padding: 0

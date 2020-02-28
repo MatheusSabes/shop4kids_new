@@ -95,15 +95,22 @@
     &__actions
         padding: 10px (gutter/2)
 
+        div
+            text-align: center
+
     &__actions
         display: flex
-        align-items: stretch
+        align-items: flex-end
         justify-content: space-between
         flex-wrap wrap
         opacity 0
         visibility hidden
         margin-bottom 10px
         position relative
+
+        @media mobile 
+            display: none
+
         &--status
             position absolute
             width: 70%

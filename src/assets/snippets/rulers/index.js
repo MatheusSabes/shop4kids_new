@@ -4,8 +4,9 @@ if (jQuery('.rulers__list')) {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: false,
-        prevArrow: `<button type="button" aria-label="prev" class="slick-prev"><</button>`,
-        nextArrow: `<button type="button" aria-label="next" class="slick-next">></button>`,
+        prevArrow: ``,
+        nextArrow: ``,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 767,

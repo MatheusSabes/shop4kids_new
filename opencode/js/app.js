@@ -262,8 +262,6 @@ if (jQuery('.related__list')) {
                 {
                     breakpoint: 426,
                     settings: {
-                        arrows: false,
-                        dots: true,
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
@@ -373,87 +371,6 @@ if ($('.banner--grid .banner__list')) {
     });
 }
 
-if ($('.page-home__content--1')) {
-    $('.page-home__content--1 .page-home__banner-list').not('.slick-initialized').slick({
-        mobileFirst: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [
-            {
-                breakpoint: 426,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }
-        ]
-    });
-}
-
-if ($('.page-home__content--2')) {
-    $('.page-home__content--2 .page-home__banner-list').not('.slick-initialized').not('.page-home__banner-list-down').slick({
-        mobileFirst: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5500,
-        responsive: [
-            {
-                breakpoint: 426,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }
-        ]
-    });
-
-    $('.page-home__content--2 .page-home__banner-list-down').not('.slick-initialized').slick({
-        mobileFirst: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5500,
-        responsive: [
-            {
-                breakpoint: 426,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
-}
 
 if ($('.page-home__mobile--list')) {
     $('.page-home__mobile--list').not('.slick-initialized').slick({
@@ -658,8 +575,9 @@ if (jQuery('.rulers__list')) {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: false,
-        prevArrow: `<button type="button" aria-label="prev" class="slick-prev"><</button>`,
-        nextArrow: `<button type="button" aria-label="next" class="slick-next">></button>`,
+        prevArrow: ``,
+        nextArrow: ``,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 767,
