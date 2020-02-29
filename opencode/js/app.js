@@ -20,8 +20,27 @@ if (window.matchMedia("(max-width:993px)").matches) {
     }
 }
 jQuery('document').ready(function ($) {
+    function pad(d) {
+        return (d < 10) ? '0' + d.toString() : d.toString();
+    }
+
+    $(document).on('click', '.uptodate', function (del) {
+        ///web_api/carts/{session_id}/{product_id}
+        var dataSession = $("html").attr("data-session");
+        var productID = parseInt($(this).data('id'))
+        var VariantId = $(this).data('variationId')
+        $.ajax({
+            method: "DELETE",
+            url: "/web_api/carts/" + dataSession + "/" + productID + '/' + VariantId
+        }).done(function (response, textStatus, jqXHR) {
+            $(document).trigger('cart_update')
+        })
+    })
+
+
+
     $(document).on('cart_update', function (response) {
-        dataSession = $("html").attr("data-session");
+        var dataSession = $("html").attr("data-session");
         $.ajax({
             method: "GET",
             url: "/web_api/cart/" + dataSession
@@ -32,7 +51,13 @@ jQuery('document').ready(function ($) {
                     $('.minicart__list').html('')
                 }
 
-                $('.cart__amount').html(response.length)
+                var AmountItens = 0
+
+                var NMount = response.map(item => {
+                    AmountItens = AmountItens + parseInt(item.Cart.quantity)
+                })
+
+                $('.cart__amount').html(pad(AmountItens))
                 for (const i in response) {
                     if (response.hasOwnProperty(i)) {
                         const item = response[i];
@@ -48,7 +73,7 @@ jQuery('document').ready(function ($) {
                                         <span class="minicart__price">R$ &nbsp;'+ item.Cart.price + '</span>\
                                         <span class="minicart__qty">'+ item.Cart.quantity + ' Un.</span>\
                                     </span>\
-                                    <button class="minicart__delete" type="button" data-id="'+ item.Cart.product_id + '">\
+                                    <button class="minicart__delete uptodate" type="button" data-id="'+ item.Cart.product_id + '" data-variation-id="' + item.Cart.variant_id + '">\
                                         X\
                                     </button>\
                                 </span>\

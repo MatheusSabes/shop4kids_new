@@ -7,7 +7,9 @@
         margin: 5px -5px
 
     &__link a, &__link--current 
-        flex: 0 0 auto
+        flex: 0 0 42px
+        width: 42px
+        height 42px
         display: flex 
         justify-content: center 
         align-items: center 
@@ -20,16 +22,22 @@
         font-style normal
         line-height normal
         letter-spacing normal
-        color: #000
-
+        color: #868686
+        border-radius: 21px
+        border-width: 1px
+        border-style: solid
+        border-width: 2px
+        border-color: #868686
         &:hover 
             color: #ff6b6b
+            border-color: #ff6b6b
 
 
     &__link 
         &--current
             background-color: transparent
             color #ff6b6b
+            border-color: #ff6b6b
 
         &--first, &--prev, &--next, &--last 
             a 

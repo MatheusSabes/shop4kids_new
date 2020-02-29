@@ -717,7 +717,7 @@
   }
   .minicart__delete {
     position: absolute;
-    right: -14px;
+    right: -10px;
     top: 0;
     width: 14px;
     height: 14px;
@@ -803,6 +803,7 @@
 }
 .minicart__info {
   flex: 1 1 auto;
+  padding-right: 20px;
 }
 .minicart__details {
   align-items: baseline;
