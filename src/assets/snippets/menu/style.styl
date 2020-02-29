@@ -41,19 +41,6 @@
                         align-items: stretch
                         flex-flow: row wrap 
 
-                        &:after 
-                            icon: "\f105"
-                            order: 2
-                            flex: 0 0 auto
-                            
-                            display: flex 
-                            justify-content: center 
-                            align-items: center
-                            width: 45px 
-                            font-size: 20px
-
-                            transition: all 200ms ease
-
                         > .menu__link 
                             flex: 1 
                             order: 1
@@ -69,10 +56,6 @@
                         > .menu--sub 
                             order: 3
                             flex: 0 0 100%
-
-                        &[aria-expanded=true]
-                            &:after 
-                                transform: rotate(90deg)
 
 @media desktop
     .menu

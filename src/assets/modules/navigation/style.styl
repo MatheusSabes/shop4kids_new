@@ -22,16 +22,17 @@
         &__header
             display none
         &__label
+            width: auto
+            flex 0 0 auto
             display: flex
-            justify-content space-between
             width: 100%
             position relative
-            &:before
+            align-items: center
+            &:after
                 content 'ou'
-                position: absolute
-                left 50%
-                top 50%
-                transform translate(-50%, -50%)
+                margin: 0 10px
+                order 1
+                display: inline-block
             & > a
                 font-family Montserrat
                 font-size 12px
@@ -41,6 +42,10 @@
                 line-height normal
                 letter-spacing normal
                 color #419ecf !important
+                order 0
+                margin-bottom: 0 !important
+                &:not(.modal-login)
+                    order: 3
         &__main
             display flex
             text-align left
@@ -155,7 +160,25 @@
         .button__close
             opacity: 1
             animation: slideOpenButton 500ms 1 ease
-                
+.set
+    display: none
+@media screen and (max-width: 992px)
+    .set
+        order: 2;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        transition: all 200ms ease;
+        &:before
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 20px;
+    .menu--navigation .menu__item--has-child[aria-expanded=true] & .set
+        transform: rotate(90deg);             
+
 @media desktop
     .navigation
         background: #fff
