@@ -55,7 +55,9 @@
         color: #211915
         margin-bottom: 10px
         @media screen and (max-width: 992px)
-            justify-content: center
+            justify-content: flex-start
+            flex-direction: row;
+            text-align: left;
         svg
             margin-right: 5px
 
@@ -83,7 +85,7 @@
         color #222222
         @media screen and (max-width: 992px)
             justify-content: center
-            text-align: center
+            text-align: left
     &__email
         display: block
         font-size 11px
@@ -93,7 +95,7 @@
         margin-bottom 8px
         @media screen and (max-width: 992px)
             justify-content: center
-            text-align: center
+            text-align: left
 .attendance
     &--header
 
@@ -117,7 +119,16 @@
                 font-weight normal
                 line-height normal
                 color #222222
-                
+.header__attendance      
+    @media screen and (max-width: 992px)
+        & .attendance__email,
+        & .attendance__support
+            text-align: left
+            justify-content: flex-start
+            & h2
+                margin-right: auto
+        & .socials__list
+            justify-content: flex-start
 
 .attendance
     &--footer
