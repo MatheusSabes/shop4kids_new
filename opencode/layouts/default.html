@@ -70,13 +70,16 @@
         <div class="wrapper">
             <div class="wrapper__container">
                 {% element 'header' %} 
+        
+
                 {% if pages.current == 'home' %} 
-                    {% if not utils.is_mobile %}
-                        {% element 'snippets/banner' {'name': 'home'} %}
+                    {% if not utils.is_mobile %} 
+                        {% element 'snippets/banner' {'name': 'home'} %} 
                     {% else %} 
-                        {% element 'snippets/banner' {'name': 'home'} %}
-                    {% endif %}
+                        {% element 'snippets/banner' {'name': 'extra12'} %} 
+                    {% endif %} 
                 {% endif %}
+    
 
                 <main class="main">
                     <div class="main__container">

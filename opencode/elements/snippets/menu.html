@@ -96,7 +96,16 @@
     </div>
     <figure class="menu__image">
         <a href="">
-            <img src="https://via.placeholder.com/190x313" alt="">
+            
+            {% for category in menu %}
+                {% if category.images and not utils.is_mobile %}
+                <figure class="category__image">
+                    <img src="{{ category.images[0] }}" alt="{{ category.name }}">
+                </figure>
+                {% endif %}
+            {% endfor %}
+
+            
         </a>
     </figure>
     </div>
@@ -109,42 +118,36 @@
                 {% if settings.filter_marc_1_img %}
                     <img src="{{ asset(settings.filter_marc_1_img) }}" alt="">
                 {% else %}
-                    <img src="https://via.placeholder.com/85x35" alt="">
                 {% endif %}
             </a>
             <a href="{{ settings.filter_marc_2 }}" class="menu__filter__marcas--item">
                 {% if settings.filter_marc_2_img %}
                     <img src="{{ asset(settings.filter_marc_2_img) }}" alt="">
                 {% else %}
-                    <img src="https://via.placeholder.com/85x35" alt="">
                 {% endif %}
             </a>
             <a href="{{ settings.filter_marc_3 }}" class="menu__filter__marcas--item">
                 {% if settings.filter_marc_3_img %}
                     <img src="{{ asset(settings.filter_marc_3_img) }}" alt="">
                 {% else %}
-                    <img src="https://via.placeholder.com/85x35" alt="">
                 {% endif %}
             </a>
             <a href="{{ settings.filter_marc_4 }}" class="menu__filter__marcas--item">
                 {% if settings.filter_marc_4_img %}
                     <img src="{{ asset(settings.filter_marc_4_img) }}" alt="">
                 {% else %}
-                    <img src="https://via.placeholder.com/85x35" alt="">
                 {% endif %}
             </a>
             <a href="{{ settings.filter_marc_5 }}" class="menu__filter__marcas--item">
                 {% if settings.filter_marc_5_img %}
                     <img src="{{ asset(settings.filter_marc_5_img) }}" alt="">
                 {% else %}
-                    <img src="https://via.placeholder.com/85x35" alt="">
                 {% endif %}
             </a>
             <a href="{{ settings.filter_marc_6 }}" class="menu__filter__marcas--item">
                 {% if settings.filter_marc_6_img %}
                     <img src="{{ asset(settings.filter_marc_6_img) }}" alt="">
                 {% else %}
-                    <img src="https://via.placeholder.com/85x35" alt="">
                 {% endif %}
             </a>
         </article>
