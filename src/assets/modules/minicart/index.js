@@ -109,7 +109,6 @@ jQuery('document').ready(function ($) {
 
             }).done((response, textStatus, jqXHR) => {
 
-                jQuery(this).closest('.product').append('<span class="buy__button--ok">Produto adicionado</span>');
                 setTimeout(function () {
                     jQuery('.buy__button--ok').remove();
                     $(document).trigger('cart_update')

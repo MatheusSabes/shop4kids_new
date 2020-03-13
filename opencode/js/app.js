@@ -130,7 +130,6 @@ jQuery('document').ready(function ($) {
 
             }).done((response, textStatus, jqXHR) => {
 
-                jQuery(this).closest('.product').append('<span class="buy__button--ok">Produto adicionado</span>');
                 setTimeout(function () {
                     jQuery('.buy__button--ok').remove();
                     $(document).trigger('cart_update')
@@ -346,7 +345,7 @@ jQuery(document).on('click', '#minus', function () {
 if ($('.banner--javascript .banner__list')) {
     $('.banner--javascript .banner__list').not('.slick-initialized').slick({
         mobileFirst: false,
-        infinite: false,
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: `<button aria-label="prev" type="button" class="slick-prev"><</button>`,

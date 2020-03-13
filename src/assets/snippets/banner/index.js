@@ -2,7 +2,7 @@
 if ($('.banner--javascript .banner__list')) {
     $('.banner--javascript .banner__list').not('.slick-initialized').slick({
         mobileFirst: false,
-        infinite: false,
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: `<button aria-label="prev" type="button" class="slick-prev"><</button>`,
