@@ -4,7 +4,22 @@
 #col3D, #colFotos, #colVideo, #foto_p, #preco, .prodBox, .onVar, .onVar:hover
     background: none 
     border: 0
-
+.thumbs__list
+    & .slick-prev
+        @media screen and (max-width: 992px)
+            transform rotate(180deg) translateY(50%)
+#colFotos
+    display flex
+    flex-direction row-reverse
+    padding-right 20px
+    @media screen and (max-width: 992px)
+        flex-direction column
+    & .produto-imagem-miniaturas
+        border-top none !important
+        padding-top 0 !important
+        & > ul
+            display flex
+            flex-direction column
 #form_comprar
     position relative
     & .page-product__short-review

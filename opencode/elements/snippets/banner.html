@@ -5,7 +5,7 @@
             {% if type == 'javascript' %}
                 {% if banners.home.slides %}
                 <div class="banner__list">
-                    {% for slide in banners.home.slides %}
+                    {% for slide in banners[name].slides %}
                     {% set link = slide.link %}
                     {% set image = slide.image %}
                     {% set target = slide.target %}

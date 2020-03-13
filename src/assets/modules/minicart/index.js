@@ -133,3 +133,9 @@ jQuery('document').ready(function ($) {
         })
     }
 })
+
+if (window.matchMedia("(max-width:991px)").matches) {
+    jQuery(document).on('click', '.header__minicart', function () {
+        document.querySelector('.cart__dropdown').classList.add('show')
+    })
+}

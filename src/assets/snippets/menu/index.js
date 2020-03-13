@@ -68,13 +68,28 @@ $('.set').click(function (e) {
 // navigationHiddenResize();
 // navigationAlign();
 
+//Blur menu
 
-jQuery('.button--menu').click(function () {
+
+
+jQuery('nav.navigation').click(function (e) {
+    e.stopPropagation();
+})
+
+jQuery('.button--menu').click(function (e) {
+    e.stopPropagation();
     jQuery('body').addClass('menu__open')
+    jQuery('.navigation__bg').addClass('show')
 });
 
 jQuery('.button__close--navigation').click(function () {
     jQuery('body').removeClass('menu__open')
+    jQuery('.navigation__bg').removeClass('show')
+});
+
+jQuery('.navigation__bg').click(function (e) {
+    jQuery('body').removeClass('menu__open')
+    jQuery(this).removeClass('show')
 });
 
 /* Menu Mobile */

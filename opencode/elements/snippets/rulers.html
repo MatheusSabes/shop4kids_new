@@ -10,8 +10,10 @@
                         </svg>
                     </span>
                     <span class="rulers__title">
-                        <strong>{{ settings.informationTitle01 }} </strong>
-                        {{ settings.informationSubtitle01 }}
+                        {% if settings.linkInformation01 %} <a href="{{ settings.linkInformation01}}"> {% endif %}
+                            <strong>{{ settings.informationTitle01 }} </strong>
+                            {{ settings.informationSubtitle01 }}
+                        {% if settings.linkInformation01 %} </a>{% endif %}
                     </span>
                 </div>
             </li>
@@ -24,8 +26,10 @@
                         </svg>
                     </span>
                     <span class="rulers__title">
-                        <strong>{{ settings.informationTitle02 }} </strong>
-                        {{ settings.informationSubtitle02 }}
+                        {% if settings.linkInformation02 %} <a href="{{ settings.linkInformation02}}"> {% endif %}
+                            <strong>{{ settings.informationTitle02 }} </strong>
+                            {{ settings.informationSubtitle02 }}
+                        {% if settings.linkInformation02 %} </a> {% endif %}
                     </span>
                 </div>
             </li>
@@ -38,8 +42,10 @@
                         </svg>
                     </span>
                     <span class="rulers__title">
+                    {% if settings.linkInformation03 %} <a href="{{ settings.linkInformation03}}"> {% endif %}
                         <strong>{{ settings.informationTitle03 }} </strong>
                         {{ settings.informationSubtitle03 }}
+                    {% if settings.linkInformation03 %} </a> {% endif %}
                     </span>
                 </div>
             </li>
@@ -52,8 +58,10 @@
                         </svg>
                     </span>
                     <span class="rulers__title">
+                    {% if settings.linkInformation04 %} <a href="{{ settings.linkInformation04}}"> {% endif %}
                         <strong>{{ settings.informationTitle04 }} </strong>
                         {{ settings.informationSubtitle04 }}
+                    {% if settings.linkInformation04 %} </a> {% endif %}
                     </span>
                 </div>
             </li>
