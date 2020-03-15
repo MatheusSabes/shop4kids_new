@@ -186,6 +186,7 @@ if (window.matchMedia("(max-width:993px)").matches) {
     }
 }
 
+ 
 
 if (jQuery('.showcase__list[data-carousel=true]')) {
     jQuery('.showcase__list[data-carousel=true]').each(function () {
@@ -208,8 +209,8 @@ if (jQuery('.showcase__list[data-carousel=true]')) {
                 {
                     breakpoint: 767,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToShow: 3,
+                        slidesToScroll: 3
                     }
                 }
             ]
@@ -246,7 +247,6 @@ if (jQuery('.showcase__item')) {
     });
 }
 
- 
  
 document.querySelectorAll('a[href^="#ProdAbas"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -536,8 +536,6 @@ if(button) {
 }
 
 
- 
-
 
 // function FakeSelect() {
 //     $('select').each(function(){
@@ -565,6 +563,8 @@ if(button) {
 // FakeSelect();
 
 // document.addEventListener('FAKESELECT', () => { FakeSelect() }, false);
+
+ 
 
 
 

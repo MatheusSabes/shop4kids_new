@@ -20,8 +20,8 @@ if (jQuery('.showcase__list[data-carousel=true]')) {
                 {
                     breakpoint: 767,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToShow: 3,
+                        slidesToScroll: 3
                     }
                 }
             ]

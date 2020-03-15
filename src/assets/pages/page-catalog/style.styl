@@ -37,8 +37,17 @@
                 color #211915
     &__container 
         display: flex 
-        margin: '0 %s' % -(30px / 2)
         margin-top: 20px
+
+        @media desktop 
+            margin: '0 %s' % -(30px / 2)
+            margin-top 70px
+            
+
+        
+        
+
+
     &__toolbar
         padding: 20px 0
         &--top 

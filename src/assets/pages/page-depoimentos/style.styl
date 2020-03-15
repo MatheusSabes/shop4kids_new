@@ -11,24 +11,53 @@
 
 
 
-.page-compre-no-atacado
-    main
-        & .board_htm
-            & div:nth-child(3)
-                & > div
-                    flex 0 0 calc(33.333333333% - 20px) !important
-                    margin 0 !important
-                    margin-right 10px !important
-                    justify-content space-between
+.atacado
+    &__contet 
+        display: flex;
+        justify-content: space-between;
+        padding: 15px
+
+        &--two
+            display: flex
+            align-items: stretch
+            justify-content: space-between
+
+            div
+                flex: 0 0 33.3%
+                padding: 15px
+
+    &__block
+        flex: 1 1 50%;
+        padding: 5px;
+
+        &--two
+            div
+                padding-bottom 15px
+
+@media mobile 
+    .atacado
+        &__contet 
+            flex-wrap: wrap
+            padding: 0 15px
+            text-align: center
+
+            &--two
+                flex-wrap: wrap
+                padding: 0 15px
+                text-align: center
+
+                div
+                    padding-bottom 15px
+                    flex: 0 0 100%
+
                     &:last-child
-                        margin-left 10px !important
-                        flex 0 0 calc(66.666666666% - 20px) !important
-                        display flex
-                        & > div
-                            flex 0 0 calc(50% - 10px) !important
-                            justify-content space-between
-        img
-            display: block
-            width 100% !important    
-            height auto!important
-            margin: 0 auto !important
+                        padding: 0px
+
+        &__block
+            flex: 0 0 100%
+            padding-bottom: 15px
+
+            &--two
+                padding-bottom: 0
+
+

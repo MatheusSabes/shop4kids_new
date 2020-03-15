@@ -356,13 +356,13 @@
             margin: 0 (30px / 2) 0 0
             border: 0
             max-width: 112px
-            max-height: 47px
+           
             flex: 0 0 auto
             display: flex
             justify-content space-between
             align-items: stretch
-            border: solid 1px #939393
-            border-radius: 15px
+    
+
             & button
                 max-width 25px
                 min-width 0
@@ -390,13 +390,19 @@
             width: 100% 
             font-size: 14px
             text-align: center
-            border-width: 0 1px
+
         #bt_comprar
             flex: 1
             min-width: 0
 
         #minus
             order: -1
+            border: 1px solid #939393!important
+            border-radius: 15px 0px 0px 15px
+
+        #plus
+            border: 1px solid #939393!important
+            border-radius: 0px 15px 15px 0px
 
         #minus, #plus
             border: none
@@ -467,6 +473,9 @@
     border: none!important
     padding 0
     height 64px
+
+    &:hover
+        opacity 0.8
 
     >.botao-commerce-img
         border: none!important

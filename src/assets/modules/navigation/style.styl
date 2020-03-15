@@ -49,7 +49,8 @@
 
     .menu
         &__link
-            &--nv2
+            &--nv2,
+            &--nv3
                 font-family Montserrat
                 font-size 12px
                 font-weight normal
@@ -156,19 +157,37 @@
 .set
     display: none
 @media screen and (max-width: 992px)
-    .set
-        order: 2;
-        flex: 0 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 45px;
-        transition: all 200ms ease;
-        &:before
-            content: "\f105";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            font-size: 20px;
+    
+    li.menu__item.menu__item--nv1.menu__item--has-child
+        > .set
+            order: 2;
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            transition: all 200ms ease;
+            &:before
+                content: "\f105";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 20px;
+
+    li.menu__item.menu__item--nv2.menu__item--has-child
+        .set
+            order: 2;
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            transition: all 200ms ease;
+            &:before
+                content: "\f105";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 20px;
+
     .menu--navigation .menu__item--has-child[aria-expanded=true] & .set
         transform: rotate(90deg);             
 
