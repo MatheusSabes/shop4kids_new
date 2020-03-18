@@ -715,7 +715,8 @@
     justify-content: center;
   }
   .minicart__finish:hover {
-    background: #339021;
+    opacity: 0.8;
+    color: #fff;
   }
   .minicart__qty:before {
     content: ' / ';
@@ -795,6 +796,10 @@
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 6px;
+  }
+  .minicart__finish:hover {
+    opacity: 0.8;
+    color: #fff;
   }
   .minicart__main {
     padding: 19px;

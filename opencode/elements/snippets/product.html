@@ -4,13 +4,15 @@
         <figure class="product__figure">
         {% if product.images %}
             <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" data-tray-tst="vitrine_produto_link_imagem">
-                <img class="product__img" src="{{ product.images[0].full }}" alt="{{ product.name }}" title="{{ product.name }}">
+                <img class="product__img lazy" data-original="{{ product.images[0].full }}" src="{{ asset('img/loading.gif') }}" 
+                    alt="{{ product.name }}" title="{{ product.name }}" width="180" height="180" layout="responsive">
             </a>
         {% else %}
             <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" data-tray-tst="vitrine_produto_link_imagem">
                 <img class="product__img" src="{{ asset('img/no-image.svg') }}" alt="Nenhuma imagem foi cadastrada" width="100" title="{{ product.name }}">
             </a>
         {% endif %}
+
         </figure>
         
         {% if settings.discount %}

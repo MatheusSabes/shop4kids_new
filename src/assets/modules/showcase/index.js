@@ -6,7 +6,7 @@ if (jQuery('.showcase__list[data-carousel=true]')) {
             mobileFirst: false,
             slidesToShow: 4,
             slidesToScroll: 4,
-            infinite: false,
+            infinite: true,
             prevArrow: `<button aria-label="prev" type="button" class="slick-prev"><</button>`,
             nextArrow: `<button aria-label="prev" type="button" class="slick-next">></button>`,
             responsive: [
@@ -20,8 +20,8 @@ if (jQuery('.showcase__list[data-carousel=true]')) {
                 {
                     breakpoint: 767,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToShow: 3,
+                        slidesToScroll: 3
                     }
                 }
             ]
@@ -35,7 +35,7 @@ if (jQuery('.showcase__item')) {
             mobileFirst: false,
             slidesToShow: 3,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             prevArrow: `<button aria-label="prev" type="button" class="slick-prev"><</button>`,
             nextArrow: `<button aria-label="prev" type="button" class="slick-next">></button>`,
             responsive: [
