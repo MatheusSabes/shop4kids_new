@@ -30,17 +30,19 @@
         <h1 class="product__name"><a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" data-tray-tst="vitrine_produto_link_imagem">{{ product.name }}</a></h1>
         <!--RATING-->
         <div class="product__rating">
-            {% if product.ranking.rating == 0 %}
-                {% set productRating = 1 %}
-            {% else %}
-                {% set productRating = product.ranking.rating %}
-            {% endif %}
-
-            {% for star in 1..productRating %}
-                <i class="rating__stars" data-stars-count="{{ star }}">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
-                </i>
+            {% if product.ranking %}
+            {% for i in 1..5 %}
+                {% if i <= product.ranking.rating %}
+                    <i class="rating__stars active" data-stars-count="{{ star }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                    </i>
+                {% else %}
+                    <i class="rating__stars" data-stars-count="{{ star }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ddd"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                    </i>
+                {% endif %}
             {% endfor %}
+            {% endif %}
         </div>
 
         <div class="prduct__rating">
@@ -73,10 +75,9 @@
                 
                 {% set dataVariant = sku.id %}
                 {% for type in sku %}
-                    
                     {% for key, value in type %}
                     {% if value.type == 'Tamanho' %}
-                        <div class="product__variants--item" data-id="{{ dataVariant }}">
+                        <div class="product__variants--item {{ sku.stock < 1 ? 'inactive': ''}}" data-id="{{ dataVariant }}">
                             <span>{{ value.value }}</span>
                         </div>
                     {% endif %}
