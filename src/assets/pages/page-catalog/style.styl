@@ -1,21 +1,28 @@
-.page-catalog 
+.page-catalog ,
+.page-search
     & .showcase
         margin 0px
         margin-top: 50px
         margin-bottom: 20px
+        padding: (gutter/2)
 
         &__list
-            display: flex
-            flex-wrap: wrap
+            display: flex!important
+            flex-wrap: wrap!important
+            flex-flow: wrap
+            
 
             @media mobile 
                 justify-content: center
 
+
         &__item
             flex: 0 0 30.333333333%
+            max-width 33.3333%
 
             @media mobile 
                 flex: 0 0 50%
+                max-width 100%
 
     & .breadcrumb
         height 50px
@@ -183,19 +190,19 @@
             .button__close 
                 opacity: 0 
 
-            // &[aria-hidden=true]
-            //     .button__close 
-            //         opacity: 0 
-            //         animation: slideCloseButton 500ms 1 ease
+            &[aria-hidden=true]
+                .button__close 
+                    opacity: 0 
+                    animation: slideCloseButton 500ms 1 ease
 
-            // &[aria-hidden=false]
-            //     .button__mask
-            //         opacity: 1 
-            //         visibility: visible
+            &[aria-hidden=false]
+                .button__mask
+                    opacity: 1 
+                    visibility: visible
 
-            //     .button__close 
-            //         opacity: 1
-            //         animation: slideOpenButton 500ms 1 ease
+                .button__close 
+                    opacity: 1
+                    animation: slideOpenButton 500ms 1 ease
             
         &__filters 
             position: fixed 
