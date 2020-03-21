@@ -89,7 +89,11 @@
     </div>
     <figure class="menu__image">
         <a href="">
-            <img src="https://via.placeholder.com/190x313" alt="">
+            {% if category.images[0] %}
+                <img src="{{ category.images[0] }}" class="images"/>
+            {% else %}
+                <img src="https://via.placeholder.com/190x313" alt="">
+            {% endif %}
         </a>
     </figure>
     </div>
