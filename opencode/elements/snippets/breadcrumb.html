@@ -4,21 +4,31 @@
             <a class="breadcrumb__label" href="/">{{ Translation('pagina_inicial') }}</a>
         </span>
         {% if breadcrumb %}
-            <span class="breadcrumb__sep">></span>
-            
-            {% for item in breadcrumb %}
-                <span class="breadcrumb__item {% if loop.index == breadcrumb|length %} active {% endif %}">
-                    <a class="breadcrumb__label" href="{{ item.link}}" title="{{ item.name }}">{{ item.name }}</a>
-                </span>
-                {% if loop.index != breadcrumb|length %}
-                    <span class="breadcrumb__sep">></span>
-                {% endif %}
-            {% endfor %}
-            <span class="breadcrumb__item">
-                <span class="breadcrumb__label">
-                    {{ pages.current == 'product' ? product.name : category.name }}
-                </span>
+        <span class="breadcrumb__sep">/</span>
+        {% for item in breadcrumb %}
+        <span class="breadcrumb__item">
+            <a class="breadcrumb__label" href="{{ item.link}}" title="{{ item.name }}">{{ item.name }}</a>
+        </span>
+        {% endfor %}
+
+        {% if pages.current ==  category.name %}
+        <span class="breadcrumb__item">
+            <span class="breadcrumb__label">
+                {{ pages.current ==  category.name }}
             </span>
+        </span>
         {% endif %}
+        {% endif %}
+
+        {% if pages.current == 'product' %}
+        {% else %}
+        <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__item">
+            <span class="breadcrumb__label">
+                {{ category.name }}
+            </span>
+        </span>
+        {% endif %}
+
     </div>
 </div>

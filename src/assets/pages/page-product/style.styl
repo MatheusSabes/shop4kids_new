@@ -4,7 +4,22 @@
 #col3D, #colFotos, #colVideo, #foto_p, #preco, .prodBox, .onVar, .onVar:hover
     background: none 
     border: 0
-
+.thumbs__list
+    & .slick-prev
+        @media screen and (max-width: 992px)
+            transform rotate(180deg) translateY(50%)
+#colFotos
+    display flex
+    flex-direction row-reverse
+    padding-right 20px
+    @media screen and (max-width: 992px)
+        flex-direction column
+    & .produto-imagem-miniaturas
+        border-top none !important
+        padding-top 0 !important
+        & > ul
+            display flex
+            flex-direction column
 #form_comprar
     position relative
     & .page-product__short-review
@@ -330,6 +345,7 @@
     &__actions 
         .passo1, #product-form-box
             display: flex 
+            align-items: flex-end
 
         #product-form-box
             width: 100% 
@@ -340,12 +356,13 @@
             margin: 0 (30px / 2) 0 0
             border: 0
             max-width: 112px
+           
             flex: 0 0 auto
             display: flex
             justify-content space-between
             align-items: stretch
-            border: solid 1px #939393
-            border-radius: 15px
+    
+
             & button
                 max-width 25px
                 min-width 0
@@ -373,13 +390,19 @@
             width: 100% 
             font-size: 14px
             text-align: center
-            border-width: 0 1px
+
         #bt_comprar
             flex: 1
             min-width: 0
 
         #minus
             order: -1
+            border: 1px solid #939393!important
+            border-radius: 15px 0px 0px 15px
+
+        #plus
+            border: 1px solid #939393!important
+            border-radius: 0px 15px 15px 0px
 
         #minus, #plus
             border: none
@@ -390,12 +413,19 @@
             font-weight: 100
             line-height: normal
         
+.related__list
+    border-bottom: 1px solid #ccc
 
+    button[class*=prev]
+        transform: rotate(180deg) translateY(50%)
+        
 .texto_variacao
     display: flex 
     padding: 0
     @media screen and (max-width: 992px)
         justify-content center
+    & > span
+        display: none
     h2, span
         float: none 
         width: auto
@@ -442,7 +472,10 @@
     background: #6bcf60
     border: none!important
     padding 0
-    
+    height 64px
+
+    &:hover
+        opacity 0.8
 
     >.botao-commerce-img
         border: none!important
@@ -458,6 +491,7 @@
         letter-spacing normal
         color #ffffff
         margin 0 auto
+        height 64px
         @media screen and (max-width: 992px)
             font-family Montserrat
             font-size 18.9px

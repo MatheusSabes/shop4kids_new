@@ -3,7 +3,7 @@
         <a href="{{ links.cart }}" class="cart__link">
             <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"><title>44</title><g data-name="Group"><path data-name="Compound Path" d="M74.5,26.6A11.9,11.9,0,1,0,65.3,31l2.4-.2,7.7,11.6H24.6l7.7-11.6,2.4.2a11.9,11.9,0,1,0-9.2-4.4L15,42.4H2.5v8H9.8l7.5,42.4H82.7l7.5-42.4h7.3v-8H85ZM61.4,19.1A3.9,3.9,0,1,1,65.3,23,3.9,3.9,0,0,1,61.4,19.1ZM34.7,15.3a3.9,3.9,0,1,1-3.9,3.9A3.9,3.9,0,0,1,34.7,15.3ZM76,84.7H24L17.9,50.4H82.1Z"/><rect data-name="Path" x="46" y="54.3" width="8" height="27"/><rect data-name="Path" x="32" y="54.3" width="8" height="27"/><rect data-name="Path" x="60" y="54.3" width="8" height="27"/></g></svg>
             <span class="cart__env-amount">
-                <span class="cart__amount" data-cart="amount-auaha">{{ cart.amount }}</span>
+                <span class="cart__amount" data-cart="amount-auaha">{{ cart.amount == 0 ? 00 : cart.amount }}</span>
             </span>
         </a>
         <div class="cart__dropdown" data-minicart={{ store.id }}></div>

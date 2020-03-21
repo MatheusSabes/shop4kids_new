@@ -17,13 +17,8 @@
                         </div>
                         
                         <div class="prices__special">
-                            {% if product.has_other_prices %}
-                                <span class="prices__label">{{ Translation('apartir') }}</span>
-                                <span class="prices__price">R$ {{ product.price_offer|currency  }}</span>
-                            {% else %}
-                                <span class="prices__label">{{ priceOld ? '' }}</span>
-                                <span class="prices__price">R$ {{ product.price_offer|currency  }}</span>
-                            {% endif %}
+                            <span class="prices__label">{{ priceOld ? '' }}</span>
+                            <span class="prices__price">R$ {{ product.price_offer|currency  }}</span>
                         </div>
                     {% else %}
                         <div class="prices__regular">

@@ -33,6 +33,9 @@
                         font-weight: 700
 
                         + .menu__item--nv1 
+                            display: flex 
+                            justify-content space-between
+                            align-items center
                             border-top: solid 1px rgba(0,0,0,.1)
 
                     &--has-child 
@@ -41,20 +44,7 @@
                         align-items: stretch
                         flex-flow: row wrap 
 
-                        &:after 
-                            icon: "\f105"
-                            order: 2
-                            flex: 0 0 auto
-                            
-                            display: flex 
-                            justify-content: center 
-                            align-items: center
-                            width: 45px 
-                            font-size: 20px
-
-                            transition: all 200ms ease
-
-                        > .menu__link 
+                        > .menu__link--nv1
                             flex: 1 
                             order: 1
                             min-width: 0
@@ -69,10 +59,6 @@
                         > .menu--sub 
                             order: 3
                             flex: 0 0 100%
-
-                        &[aria-expanded=true]
-                            &:after 
-                                transform: rotate(90deg)
 
 @media desktop
     .menu
@@ -119,6 +105,8 @@
                             color #626262
                             & img
                                 border 1px solid transparent
+                                max-width 120px
+                                
                                 &:hover
                                     border-color: #626262
                     &__faixas
@@ -351,7 +339,6 @@
                         flex-wrap nowrap
                     &--top
                         display flex
-                        height 340px
                         object-fit contain
                         justify-content space-between
                         border-bottom 1px solid #e4e4e4
@@ -365,9 +352,8 @@
                         display flex
                         flex 0 0 150px
                         flex-wrap wrap
-                        max-height 150px
-                        overflow auto
                         padding 20px 28px
+                        justify-content: space-between
                 &__item 
                     &--hidden 
                         display: none 
@@ -382,7 +368,6 @@
                             .menu--nv2
                                 opacity: 1 
                                 visibility: visible
-
                     &--nv1
                         position: static
                         display: flex
@@ -418,7 +403,7 @@
                             background: #ff412e
                             transition: all 0.2s ease-in-out
 
-                    &--nv2 
+                    &--nv2
                         display: block
                         padding: 5px (30px / 2)
                         &, & span
@@ -433,14 +418,14 @@
                             color color
                             text-decoration: none
                     &--nv3
-                        font-family Arial
+                        padding: 5px 15px
+                        font-family Montserrat
                         font-size 13px
                         font-weight normal
                         font-stretch normal
                         font-style normal
                         line-height 1.38
                         letter-spacing normal
-                        text-align left
                         color #868686
                 &--sub 
                     padding: 10px 0
@@ -452,7 +437,6 @@
                     min-width: 0
                     width 100%
                     max-width 962px
-                    height 422px
                     display none
                     flex-direction column
                     border-radius 15px

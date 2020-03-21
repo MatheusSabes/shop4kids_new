@@ -9,10 +9,12 @@
         align-items: center
         justify-content: flex-start
         height 48px
+
         @media screen and (max-width: 420px)
             & > div
                 &, & > div
                     height 100%
+
         @media screen and (min-width: 993px)
             display: flex !important
             & .slick-track
@@ -24,6 +26,19 @@
                 background-size: auto 15px
             &[class*=prev]
                 transform rotate(180deg) translateY(50%)
+
+        &:not(.slick-slider)
+            display: flex 
+            justify-content: space-between
+            align-items: stretch
+            flex-flow: row nowrap
+            overflow hidden
+            
+            @media mobile 
+                .rulers__item
+                    flex: 0 0 100%
+
+
     &__box
         display: flex 
         justify-content: center
@@ -49,7 +64,7 @@
             height initial
 
     &__title
-        &, & strong 
+        &, & strong, & a 
             font-family Montserrat
             font-size 14px
             font-weight 400

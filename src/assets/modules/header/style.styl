@@ -10,13 +10,15 @@
     background: #fff
     transition: all .2s ease-in-out
     @media screen and (max-width: 420px)
-        height 150px
+        height initial
     [data-scrolling-mode=down] &
         border-bottom-style: solid
         border-bottom-width: 1px
         box-shadow: 0 0 10px rgba(0,0,0,.1)
-        @media screen and (max-width: 420px)
+        @media screen and (max-width: 991px)
             height initial
+            box-shadow none
+            border 0
 
     &__attendance 
         display: none 
@@ -28,6 +30,8 @@
         align-items: center
         margin: 0 auto
         padding: 5px 15px
+        @media screen and (max-width: 991px)
+            flex-wrap wrap
         &--catalog
             flex-wrap: wrap
             & .header__search
@@ -113,10 +117,12 @@
         z-index: 1
         transition: all .2s ease-in-out
         @media screen and (max-width: 992px)
-            position relative
             margin 0 auto
             margin-left: auto !important
             order: 3
+            position relative
+            left initial
+            top initial
         &--catalog
             margin-left 20px
             & .search
@@ -145,10 +151,7 @@
                             fill #FF6B6B
                     & path
                         fill #FFFFFF
-        [data-scrolling-mode=down] &
-            transform: translate3d(0, -100%, 0)
-            opacity 0
-
+      
 @media desktop
     .header 
         margin-bottom: (gutter/2)
@@ -190,9 +193,6 @@
             min-width: 0
             position: static
             max-width 250px
-
-            [data-scrolling-mode=down] &
-                transform: none 
 
     .page-product
         .header

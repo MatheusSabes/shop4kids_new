@@ -9,3 +9,64 @@
             background: rgba(0,0,0,.05)
             border: 0 
 
+
+.board_htm
+    &.description
+        & > div:nth-child(1)
+            padding 0 20px
+            display flex
+            justify-content center
+            & img
+                width 100%
+.atacado
+    &__contet 
+        display: flex;
+        justify-content: space-between;
+        padding: 15px
+
+        &--two
+            display: flex
+            align-items: stretch
+            justify-content: space-between
+
+            div
+                flex: 0 0 33.3%
+                padding: 15px
+
+    &__block
+        flex: 1 1 50%;
+        padding: 5px;
+
+        &--two
+            display flex
+            flex-direction column
+            justify-content space-between
+            align-items flex-end
+
+@media mobile 
+    .atacado
+        &__contet 
+            flex-wrap: wrap
+            padding: 0 15px
+            text-align: center
+
+            &--two
+                flex-wrap: wrap
+                padding: 0 15px
+                text-align: center
+
+                div
+                    padding-bottom 15px
+                    flex: 0 0 100%
+
+                    &:last-child
+                        padding: 0px
+
+        &__block
+            flex: 0 0 100%
+            padding-bottom: 15px
+
+            &--two
+                padding-bottom: 0
+
+
