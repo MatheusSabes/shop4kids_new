@@ -16,14 +16,6 @@ function quantityCart(quantity, button) {
     }
 }
 
-console.log('Testando')
-//Slick Variants
-jQuery( document ).ajaxComplete(function( event, xhr, settings ) {
-    if ( settings.url.indexOf("snippet=snippets/product-payment") != -1 ) {
-      console.log("Triggered ajaxComplete handler. The result is " +
-        xhr.responseText);
-    }
-})
 
 jQuery('.page-catalog .product__variant').not('.slick-initialized').slick({
     mobileFirst: false,

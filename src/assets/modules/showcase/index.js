@@ -57,3 +57,5 @@ if (jQuery('.showcase__item')) {
         });
     });
 }
+
+console.log('Testes na variação');
