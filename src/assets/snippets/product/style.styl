@@ -74,11 +74,13 @@
                 letter-spacing normal
                 text-align left
                 color #626262
-            &:hover,
-            &.select
+            &.inactive
+                opacity .7
+            &:not(.inactive):hover,
+            &:not(.inactive).select
                 & span
-                    background-color #626262
-                    color #ffffff
+                    border-color #5A5A5A
+                    color #5A5A5A
     &__header 
         margin-bottom: 19px 
         

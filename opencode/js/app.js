@@ -19,33 +19,6 @@ if (window.matchMedia("(max-width:993px)").matches) {
         });
     }
 }
-
-
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-    var body = document.querySelector('body');
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        body.setAttribute('data-scrolling-mode', 'down');
-    } else {
-        body.setAttribute('data-scrolling-mode', 'none');
-    }
-}
-
-/* Filter Mobile */
-
-if (window.matchMedia("(max-width:993px)").matches) {
-    var buttonFilter = document.querySelector('.button__filter')
-
-    if (buttonFilter) {
-        jQuery(buttonFilter).click(function (e) {
-            e.preventDefault();
-            $(this).parent().find('.page-catalog__filters').toggleClass('showFilter')
-        });
-    }
-}
-
- 
 jQuery('document').ready(function ($) {
     function pad(d) {
         return (d < 10) ? '0' + d.toString() : d.toString();
@@ -172,7 +145,7 @@ jQuery('document').ready(function ($) {
     }
 
     if ($('.product__variant--item').length) {
-        $(document).on('click', '.product__variant--item', function () {
+        $(document).on('click', '.product__variant--item:not(.inactive)', function () {
             var dataVariant = $(this).data('id')
             if (dataVariant) {
                 $(this).parents('.product__actions').data('variantId', dataVariant)
@@ -187,6 +160,32 @@ if (window.matchMedia("(max-width:991px)").matches) {
         document.querySelector('.cart__dropdown').classList.add('show')
     })
 }
+
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    var body = document.querySelector('body');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        body.setAttribute('data-scrolling-mode', 'down');
+    } else {
+        body.setAttribute('data-scrolling-mode', 'none');
+    }
+}
+
+/* Filter Mobile */
+
+if (window.matchMedia("(max-width:993px)").matches) {
+    var buttonFilter = document.querySelector('.button__filter')
+
+    if (buttonFilter) {
+        jQuery(buttonFilter).click(function (e) {
+            e.preventDefault();
+            $(this).parent().find('.page-catalog__filters').toggleClass('showFilter')
+        });
+    }
+}
+
  
 
 if (jQuery('.showcase__list[data-carousel=true]')) {
@@ -249,6 +248,7 @@ if (jQuery('.showcase__item')) {
 }
 
 console.log('Testes na variação');
+ 
 document.querySelectorAll('a[href^="#ProdAbas"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

@@ -124,7 +124,7 @@ jQuery('document').ready(function ($) {
     }
 
     if ($('.product__variant--item').length) {
-        $(document).on('click', '.product__variant--item', function () {
+        $(document).on('click', '.product__variant--item:not(.inactive)', function () {
             var dataVariant = $(this).data('id')
             if (dataVariant) {
                 $(this).parents('.product__actions').data('variantId', dataVariant)
