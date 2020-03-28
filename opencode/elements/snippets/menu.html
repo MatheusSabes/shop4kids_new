@@ -53,12 +53,10 @@
         <div class="menu__filter__tamanho--container">
             <small>Tamanho</small>
             <article>
-                <a href="{{ settings.filter_tam_1 }}" class="menu__filter__tamanho--item">{{ settings.filter_tam_1_title }}</a>
-                <a href="{{ settings.filter_tam_2 }}" class="menu__filter__tamanho--item">{{ settings.filter_tam_2_title }}</a>
-                <a href="{{ settings.filter_tam_3 }}" class="menu__filter__tamanho--item">{{ settings.filter_tam_3_title }}</a>
-                <a href="{{ settings.filter_tam_4 }}" class="menu__filter__tamanho--item">{{ settings.filter_tam_4_title }}</a>
-                <a href="{{ settings.filter_tam_5 }}" class="menu__filter__tamanho--item">{{ settings.filter_tam_5_title }}</a>
-                <a href="{{ settings.filter_tam_6 }}" class="menu__filter__tamanho--item">{{ settings.filter_tam_6_title }}</a>
+                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=tamanho_p" class="menu__filter__tamanho--item">P</a>
+                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=tamanho_m" class="menu__filter__tamanho--item">M</a>
+                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=tamanho_g" class="menu__filter__tamanho--item">G</a>
+                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=tamanho_gg" class="menu__filter__tamanho--item">GG</a>
             </article>
         </div>
 
@@ -66,9 +64,9 @@
         <div class="menu__filter__idade--container">
             <small>Idade</small>
             <article>
-                <a href="{{ settings.filter_ida_1 }}" class="menu__filter__idade--item">{{ settings.filter_ida_1_title }}</a>
-                <a href="{{ settings.filter_ida_2 }}" class="menu__filter__idade--item">{{ settings.filter_ida_2_title }}</a>
-                <a href="{{ settings.filter_ida_3 }}" class="menu__filter__idade--item">{{ settings.filter_ida_3_title }}</a>
+                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&caracteristica=idade_0-a-12-meses" class="menu__filter__idade--item">0 a 12 meses</a>
+                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&caracteristica=idade_1-a-3-anos" class="menu__filter__idade--item">1 a 3 anos</a>
+                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&caracteristica=idade_4-a-10-anos" class="menu__filter__idade--item">4 a 10 anos</a>
             </article>
         </div>
     </div>
@@ -78,19 +76,19 @@
         <div class="menu__filter__ano--container">
             <small>Estações do ano</small>
             <article>
-                <a href="{{ settings.filter_esta_1 }}" class="menu__filter__ano--item">{{ settings.filter_esta_1_title }}</a>
-                <a href="{{ settings.filter_esta_2 }}" class="menu__filter__ano--item">{{ settings.filter_esta_2_title }}</a>
-                <a href="{{ settings.filter_esta_3 }}" class="menu__filter__ano--item">{{ settings.filter_esta_3_title }}</a>
-                <a href="{{ settings.filter_esta_4 }}" class="menu__filter__ano--item">{{ settings.filter_esta_4_title }}</a>
+                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=estacao-do-ano_inverno" class="menu__filter__ano--item">Inverno</a>
+                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=estacao-do-ano_outono" class="menu__filter__ano--item">Outono</a>
+                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=estacao-do-ano_verao" class="menu__filter__ano--item">Verão</a>
+                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=estacao-do-ano_primavera" class="menu__filter__ano--item">Primavera</a>
             </article>
         </div>
         <!--FILTRO FAIXAS DE PREÇO-->
         <div class="menu__filter__faixas--container">
             <small>Faixas de preço</small>
             <article>
-                <a href="{{ settings.filter_faix_1 }}" class="menu__filter__faixas--item">{{ settings.filter_faix_1_title }}</a>
-                <a href="{{ settings.filter_faix_2 }}" class="menu__filter__faixas--item">{{ settings.filter_faix_2_title }}</a>
-                <a href="{{ settings.filter_faix_3 }}" class="menu__filter__faixas--item">{{ settings.filter_faix_3_title }}</a>
+                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&range=0.01-52" class="menu__filter__faixas--item">De R$0,01 a R$52,00</a>
+                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&range=52-88" class="menu__filter__faixas--item">De R$52,00 a R$88,00</a>
+                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&range=88-124" class="menu__filter__faixas--item">De R$88,00 a R$124,00</a>
             </article>
         </div>
     </div>
