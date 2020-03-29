@@ -33981,9 +33981,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Name =
-/*#__PURE__*/
-function (_Component) {
+var Name = /*#__PURE__*/function (_Component) {
   _inherits(Name, _Component);
 
   function Name(props) {
@@ -34074,9 +34072,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Prices =
-/*#__PURE__*/
-function (_Component) {
+var Prices = /*#__PURE__*/function (_Component) {
   _inherits(Prices, _Component);
 
   function Prices() {
@@ -34168,9 +34164,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Variants =
-/*#__PURE__*/
-function (_Component) {
+var Variants = /*#__PURE__*/function (_Component) {
   _inherits(Variants, _Component);
 
   function Variants(props) {
@@ -34678,9 +34672,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var quickview =
-/*#__PURE__*/
-function (_Component) {
+var quickview = /*#__PURE__*/function (_Component) {
   _inherits(quickview, _Component);
 
   function quickview(props) {
@@ -35055,9 +35047,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var remove =
-/*#__PURE__*/
-function (_Component) {
+var remove = /*#__PURE__*/function (_Component) {
   _inherits(remove, _Component);
 
   function remove() {
@@ -35159,9 +35149,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var minicart =
-/*#__PURE__*/
-function (_Component) {
+var minicart = /*#__PURE__*/function (_Component) {
   _inherits(minicart, _Component);
 
   function minicart(props) {
@@ -35487,7 +35475,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52356" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52663" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
