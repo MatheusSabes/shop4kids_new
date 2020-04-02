@@ -1,23 +1,24 @@
 {# Configuração do limite de Nivel #}
-
+ 
 {% if not settings.nivelLimit %}
     {% set nivelLimit = 3 %}
 {% else %}
     {% set nivelLimit = settings.nivelLimit %}
 {% endif %}
-
+ 
 {# Configuração de primeiro nivel #}
 {% if not nivel %}{% set nivel = 1 %}{% endif %}
 {% if not menu %}{% set menu = categories %}{% endif %}
-
+ 
 {% set class = '' %}
+{% if nivel == 1 %}{% set catId = menu[0].id %}{% endif %}
 {% if modifier %}{% set class =  ' menu--' ~ modifier %}{% endif %}
-
+ 
 <div class="menu menu--nv{{ nivel }}{{ class }}{{ nivel > 1 ? ' menu--sub' : '' }}">
     {% if nivel > 1 and nivel < 3 %}
-    <!--HEADER MENU-->
+   <!--HEADER MENU-->
     <div class="menu__ul--top">
-    
+   
     <div class="menu__ul--container">
     {% endif %}
         <ul class="menu__ul menu__ul--nv{{ nivel }}">
@@ -26,20 +27,20 @@
                 {% if category.name != 'Promoções'  %}
                 {% if category.name != 'Atacado'  %}
                     {% if category.children and nivel < nivelLimit %} {% set hasChild = ' menu__item--has-child' %}{% endif %}
-                    <li class="menu__item menu__item--nv{{ nivel }}{{ hasChild }} {% if category.name == 'Atacado' %}menu__item--atacado{% endif %}">
+                   <li class="menu__item menu__item--nv{{ nivel }}{{ hasChild }} {% if category.name == 'Atacado' %}menu__item--atacado{% endif %}">
                         <a href="{{ category.link }}" class="menu__link menu__link--nv{{ nivel }}" data-tray-tst="categoria_lvl_{{ nivel }}">
                             <span class="menu__label">{{ category.name }}</span>
                         </a>
                         {% if nivel < 3 %}
-                        <span class="set"></span>
+                       <span class="set"></span>
                         {% endif %}
                         {% if category.children and nivel < nivelLimit %}                
-                            {% element 'snippets/menu' { menu: category.children, nivel: (nivel + 1) }  %}
-                        {% endif %}
-                    </li>
+                           {% element 'snippets/menu' { menu: category.children, nivel: (nivel + 1) }  %}
+                       {% endif %}
+                   </li>
                 {% endif %}
                 {% endif %}
-            {% endfor %} 
+            {% endfor %}
             {% if nivel == 1 %}
             <li class="menu__item--atacado">
                 <a href="https://www.shop4kids.com.br/atacados" class="menu__link menu__link--nv{{ nivel }}" data-tray-tst="categoria_lvl_{{ nivel }}">
@@ -49,24 +50,24 @@
             {% endif %}
         </ul>
     {% if nivel > 1 and nivel < 3 %}
-        <!--FILTRO TAMANHO-->
+       <!--FILTRO TAMANHO-->
         <div class="menu__filter__tamanho--container">
             <small>Tamanho</small>
             <article>
-                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=tamanho_p" class="menu__filter__tamanho--item">P</a>
-                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=tamanho_m" class="menu__filter__tamanho--item">M</a>
-                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=tamanho_g" class="menu__filter__tamanho--item">G</a>
-                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=tamanho_gg" class="menu__filter__tamanho--item">GG</a>
+                <a href="/loja/busca.php?categoria={{ catId }}&variacao=tamanho_p" class="menu__filter__tamanho--item">P</a>
+                <a href="/loja/busca.php?categoria={{ catId }}&variacao=tamanho_m" class="menu__filter__tamanho--item">M</a>
+                <a href="/loja/busca.php?categoria={{ catId }}&variacao=tamanho_g" class="menu__filter__tamanho--item">G</a>
+                <a href="/loja/busca.php?categoria={{ catId }}&variacao=tamanho_gg" class="menu__filter__tamanho--item">GG</a>
             </article>
         </div>
-
+ 
         <!--FILTRO IDADE-->
         <div class="menu__filter__idade--container">
             <small>Idade</small>
             <article>
-                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&caracteristica=idade_0-a-12-meses" class="menu__filter__idade--item">0 a 12 meses</a>
-                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&caracteristica=idade_1-a-3-anos" class="menu__filter__idade--item">1 a 3 anos</a>
-                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&caracteristica=idade_4-a-10-anos" class="menu__filter__idade--item">4 a 10 anos</a>
+                <a href="/loja/catalogo.php?categoria={{ catId }}&caracteristica=idade_0-a-12-meses" class="menu__filter__idade--item">0 a 12 meses</a>
+                <a href="/loja/catalogo.php?categoria={{ catId }}&caracteristica=idade_1-a-3-anos" class="menu__filter__idade--item">1 a 3 anos</a>
+                <a href="/loja/catalogo.php?categoria={{ catId }}&caracteristica=idade_4-a-10-anos" class="menu__filter__idade--item">4 a 10 anos</a>
             </article>
         </div>
     </div>
@@ -76,25 +77,25 @@
         <div class="menu__filter__ano--container">
             <small>Estações do ano</small>
             <article>
-                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=estacao-do-ano_inverno" class="menu__filter__ano--item">Inverno</a>
-                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=estacao-do-ano_outono" class="menu__filter__ano--item">Outono</a>
-                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=estacao-do-ano_verao" class="menu__filter__ano--item">Verão</a>
-                <a href="/loja/busca.php?categoria={{ menu[0].id }}&variacao=estacao-do-ano_primavera" class="menu__filter__ano--item">Primavera</a>
+                <a href="/loja/busca.php?categoria={{ catId }}&variacao=estacao-do-ano_inverno" class="menu__filter__ano--item">Inverno</a>
+                <a href="/loja/busca.php?categoria={{ catId }}&variacao=estacao-do-ano_outono" class="menu__filter__ano--item">Outono</a>
+                <a href="/loja/busca.php?categoria={{ catId }}&variacao=estacao-do-ano_verao" class="menu__filter__ano--item">Verão</a>
+                <a href="/loja/busca.php?categoria={{ catId }}&variacao=estacao-do-ano_primavera" class="menu__filter__ano--item">Primavera</a>
             </article>
         </div>
         <!--FILTRO FAIXAS DE PREÇO-->
         <div class="menu__filter__faixas--container">
             <small>Faixas de preço</small>
             <article>
-                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&range=0.01-52" class="menu__filter__faixas--item">De R$0,01 a R$52,00</a>
-                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&range=52-88" class="menu__filter__faixas--item">De R$52,00 a R$88,00</a>
-                <a href="/loja/catalogo.php?categoria={{ menu[0].id }}&range=88-124" class="menu__filter__faixas--item">De R$88,00 a R$124,00</a>
+                <a href="/loja/catalogo.php?categoria={{ catId }}&range=0.01-52" class="menu__filter__faixas--item">De R$0,01 a R$52,00</a>
+                <a href="/loja/catalogo.php?categoria={{ catId }}&range=52-88" class="menu__filter__faixas--item">De R$52,00 a R$88,00</a>
+                <a href="/loja/catalogo.php?categoria={{ catId }}&range=88-124" class="menu__filter__faixas--item">De R$88,00 a R$124,00</a>
             </article>
         </div>
     </div>
     <figure class="menu__image">
         <a href="">
-            
+           
             {% for category in menu %}
                 {% if category.images and not utils.is_mobile %}
                 <figure class="category__image">
@@ -102,8 +103,8 @@
                 </figure>
                 {% endif %}
             {% endfor %}
-
-            
+ 
+           
         </a>
     </figure>
     </div>
