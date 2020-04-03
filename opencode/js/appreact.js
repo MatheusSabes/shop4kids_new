@@ -33971,13 +33971,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -33985,17 +33981,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Name = /*#__PURE__*/function (_Component) {
+var Name =
+/*#__PURE__*/
+function (_Component) {
   _inherits(Name, _Component);
-
-  var _super = _createSuper(Name);
 
   function Name(props) {
     var _this;
 
     _classCallCheck(this, Name);
 
-    _this = _super.call(this, props);
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Name).call(this, props));
     _this.state = {
       key: 0
     };
@@ -34014,28 +34010,28 @@ var Name = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      if (!this.props.images.length) return /*#__PURE__*/_react.default.createElement("div", {
+      if (!this.props.images.length) return _react.default.createElement("div", {
         className: "quickview__images"
-      }, /*#__PURE__*/_react.default.createElement("span", {
+      }, _react.default.createElement("span", {
         className: "quickview__images--no"
       }, "Sem Imagem"));
-      return /*#__PURE__*/_react.default.createElement("div", {
+      return _react.default.createElement("div", {
         className: "quickview__images"
-      }, /*#__PURE__*/_react.default.createElement("figure", {
+      }, _react.default.createElement("figure", {
         className: "quickview__image"
-      }, /*#__PURE__*/_react.default.createElement("img", {
+      }, _react.default.createElement("img", {
         src: this.props.images[this.state.key]
-      })), /*#__PURE__*/_react.default.createElement("div", {
+      })), _react.default.createElement("div", {
         className: "quickview__images--more"
-      }, /*#__PURE__*/_react.default.createElement("ul", null, this.props.images.map(function (image, key) {
-        return /*#__PURE__*/_react.default.createElement("li", {
+      }, _react.default.createElement("ul", null, this.props.images.map(function (image, key) {
+        return _react.default.createElement("li", {
           key: key,
           onClick: function onClick(e) {
             _this2.setState({
               key: key
             });
           }
-        }, /*#__PURE__*/_react.default.createElement("img", {
+        }, _react.default.createElement("img", {
           src: image
         }));
       }))));
@@ -34068,13 +34064,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -34082,48 +34074,48 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Prices = /*#__PURE__*/function (_Component) {
+var Prices =
+/*#__PURE__*/
+function (_Component) {
   _inherits(Prices, _Component);
-
-  var _super = _createSuper(Prices);
 
   function Prices() {
     _classCallCheck(this, Prices);
 
-    return _super.apply(this, arguments);
+    return _possibleConstructorReturn(this, _getPrototypeOf(Prices).apply(this, arguments));
   }
 
   _createClass(Prices, [{
     key: "render",
     value: function render() {
-      if (parseInt(this.props.offer) > 0) return /*#__PURE__*/_react.default.createElement("div", {
+      if (parseInt(this.props.offer) > 0) return _react.default.createElement("div", {
         className: "prices"
-      }, /*#__PURE__*/_react.default.createElement("span", {
+      }, _react.default.createElement("span", {
         className: "from"
       }, new Intl.NumberFormat('pt-br', {
         style: 'currency',
         currency: 'BRL'
-      }).format(this.props.price)), /*#__PURE__*/_react.default.createElement("span", {
+      }).format(this.props.price)), _react.default.createElement("span", {
         className: "to"
       }, new Intl.NumberFormat('pt-br', {
         style: 'currency',
         currency: 'BRL'
-      }).format(this.props.offer)), /*#__PURE__*/_react.default.createElement("span", {
+      }).format(this.props.offer)), _react.default.createElement("span", {
         className: "payment",
         dangerouslySetInnerHTML: {
           __html: this.props.payment
         }
       }));
-      return /*#__PURE__*/_react.default.createElement("div", {
+      return _react.default.createElement("div", {
         className: "prices"
-      }, /*#__PURE__*/_react.default.createElement("span", {
+      }, _react.default.createElement("span", {
         className: "from"
-      }), /*#__PURE__*/_react.default.createElement("span", {
+      }), _react.default.createElement("span", {
         className: "to"
       }, new Intl.NumberFormat('pt-br', {
         style: 'currency',
         currency: 'BRL'
-      }).format(this.props.price)), /*#__PURE__*/_react.default.createElement("span", {
+      }).format(this.props.price)), _react.default.createElement("span", {
         className: "payment",
         dangerouslySetInnerHTML: {
           __html: this.props.payment
@@ -34166,13 +34158,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -34180,17 +34168,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Variants = /*#__PURE__*/function (_Component) {
+var Variants =
+/*#__PURE__*/
+function (_Component) {
   _inherits(Variants, _Component);
-
-  var _super = _createSuper(Variants);
 
   function Variants(props) {
     var _this;
 
     _classCallCheck(this, Variants);
 
-    _this = _super.call(this, props);
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Variants).call(this, props));
     _this.state = {
       variants: [],
       selected: [],
@@ -34436,18 +34424,18 @@ var Variants = /*#__PURE__*/function (_Component) {
 
       var variants = this.state.variants;
       var selects = this.state.selects;
-      if (!variants.length) return /*#__PURE__*/_react.default.createElement("div", {
+      if (!variants.length) return _react.default.createElement("div", {
         className: "variants"
       });
-      if (this.props.type == 'close') return /*#__PURE__*/_react.default.createElement("div", {
+      if (this.props.type == 'close') return _react.default.createElement("div", {
         className: "variants variants--close"
       }, selects.map(function (select, key) {
-        return /*#__PURE__*/_react.default.createElement("div", {
+        return _react.default.createElement("div", {
           key: key,
           className: select.disabled ? 'disabled variant' : 'variant'
-        }, /*#__PURE__*/_react.default.createElement("label", {
+        }, _react.default.createElement("label", {
           htmlFor: 'variant-' + key
-        }, select.name), /*#__PURE__*/_react.default.createElement("select", {
+        }, select.name), _react.default.createElement("select", {
           disabled: select.disabled,
           value: select.options.filter(function (item) {
             return item.selected;
@@ -34458,29 +34446,29 @@ var Variants = /*#__PURE__*/function (_Component) {
           name: 'variant-' + key,
           id: 'variant-' + key
         }, select.options.map(function (option, index) {
-          return /*#__PURE__*/_react.default.createElement("option", {
+          return _react.default.createElement("option", {
             disabled: option.disabled,
             key: index + 1,
             value: option.value
           }, option.label);
         })));
-      }));else if (this.props.type == 'radio') return /*#__PURE__*/_react.default.createElement("div", {
+      }));else if (this.props.type == 'radio') return _react.default.createElement("div", {
         className: "variants variants--radio"
       }, selects.map(function (select, key) {
-        return /*#__PURE__*/_react.default.createElement("div", {
+        return _react.default.createElement("div", {
           key: key,
           className: select.disabled ? 'disabled' : ''
-        }, /*#__PURE__*/_react.default.createElement("h3", {
+        }, _react.default.createElement("h3", {
           className: "variant__title"
-        }, select.name), /*#__PURE__*/_react.default.createElement("div", {
+        }, select.name), _react.default.createElement("div", {
           className: "variant",
           "aria-disabled": select.disabled
         }, select.options.map(function (option, index) {
-          return /*#__PURE__*/_react.default.createElement("label", {
+          return _react.default.createElement("label", {
             key: 'label-' + key + '-' + index,
             className: "variant__item",
             "aria-disabled": option.disabled
-          }, /*#__PURE__*/_react.default.createElement("input", {
+          }, _react.default.createElement("input", {
             className: "variant__radio",
             type: "radio",
             onChange: function onChange(e) {
@@ -34491,32 +34479,32 @@ var Variants = /*#__PURE__*/function (_Component) {
             checked: option.selected,
             key: index + 1,
             value: option.value
-          }), option.image ? /*#__PURE__*/_react.default.createElement("span", {
+          }), option.image ? _react.default.createElement("span", {
             className: "variant__label variant__label--image"
-          }, /*#__PURE__*/_react.default.createElement("img", {
+          }, _react.default.createElement("img", {
             src: option.image,
             alt: option.label
-          })) : /*#__PURE__*/_react.default.createElement("span", {
+          })) : _react.default.createElement("span", {
             className: "variant__label"
           }, option.label));
         })));
-      }));else return /*#__PURE__*/_react.default.createElement("div", {
+      }));else return _react.default.createElement("div", {
         className: "variants variants--open"
       }, selects.map(function (select, key) {
-        return /*#__PURE__*/_react.default.createElement("div", {
+        return _react.default.createElement("div", {
           key: key,
           className: select.disabled ? 'disabled' : ''
-        }, /*#__PURE__*/_react.default.createElement("h3", {
+        }, _react.default.createElement("h3", {
           className: "variant__title"
-        }, select.name), /*#__PURE__*/_react.default.createElement("div", {
+        }, select.name), _react.default.createElement("div", {
           className: "variant",
           "aria-disabled": select.disabled
         }, select.options.map(function (option, index) {
-          return /*#__PURE__*/_react.default.createElement("label", {
+          return _react.default.createElement("label", {
             key: 'label-' + key + '-' + index,
             className: "variant__item",
             "aria-disabled": option.disabled
-          }, /*#__PURE__*/_react.default.createElement("input", {
+          }, _react.default.createElement("input", {
             className: "variant__radio",
             type: "radio",
             onChange: function onChange(e) {
@@ -34527,12 +34515,12 @@ var Variants = /*#__PURE__*/function (_Component) {
             checked: option.selected,
             key: index + 1,
             value: option.value
-          }), option.image ? /*#__PURE__*/_react.default.createElement("span", {
+          }), option.image ? _react.default.createElement("span", {
             className: "variant__label variant__label--image "
-          }, /*#__PURE__*/_react.default.createElement("img", {
+          }, _react.default.createElement("img", {
             src: option.image,
             alt: option.label
-          })) : /*#__PURE__*/_react.default.createElement("span", {
+          })) : _react.default.createElement("span", {
             className: "variant__label"
           }, option.label));
         })));
@@ -34680,13 +34668,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -34694,17 +34678,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var quickview = /*#__PURE__*/function (_Component) {
+var quickview =
+/*#__PURE__*/
+function (_Component) {
   _inherits(quickview, _Component);
-
-  var _super = _createSuper(quickview);
 
   function quickview(props) {
     var _this;
 
     _classCallCheck(this, quickview);
 
-    _this = _super.call(this, props);
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(quickview).call(this, props));
     _this.state = {
       id: undefined,
       visible: false,
@@ -34860,7 +34844,7 @@ var quickview = /*#__PURE__*/function (_Component) {
       var _this4 = this;
 
       var variants;
-      if (this.state.hasVariants) variants = /*#__PURE__*/_react.default.createElement(_index3.default, {
+      if (this.state.hasVariants) variants = _react.default.createElement(_index3.default, {
         id: this.state.id,
         price: this.props.price,
         offer: this.props.offer,
@@ -34870,7 +34854,7 @@ var quickview = /*#__PURE__*/function (_Component) {
         saleable: this.props.saleable,
         type: _config.default.quickview.variants
       });
-      if (!this.state.visible) return /*#__PURE__*/_react.default.createElement("div", {
+      if (!this.state.visible) return _react.default.createElement("div", {
         "aria-hidden": !this.state.visible,
         className: "quickview",
         id: "quickview",
@@ -34878,46 +34862,46 @@ var quickview = /*#__PURE__*/function (_Component) {
           "display": "none"
         }
       });
-      return /*#__PURE__*/_react.default.createElement("section", {
+      return _react.default.createElement("section", {
         onClick: function onClick(event) {
           _this4.close(event);
         },
         "aria-hidden": !this.state.visible,
         className: "quickview",
         id: "quickview"
-      }, this.props.isFinish || /*#__PURE__*/_react.default.createElement("div", {
+      }, this.props.isFinish || _react.default.createElement("div", {
         className: "quickview__container"
-      }, /*#__PURE__*/_react.default.createElement("button", {
+      }, _react.default.createElement("button", {
         onClick: function onClick(event) {
           _this4.close(event);
         },
         className: "quickview__button quickview__button--close"
-      }, /*#__PURE__*/_react.default.createElement("svg", {
+      }, _react.default.createElement("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "298 388 16 16"
-      }, " ", /*#__PURE__*/_react.default.createElement("path", {
+      }, " ", _react.default.createElement("path", {
         d: "M307.416,395.993l1.414-1.414c0.196-0.196,0.196-0.512,0-0.707l-0.707-0.707 c-0.195-0.195-0.511-0.196-0.707,0l-1.414,1.414l-1.414-1.413c-0.196-0.196-0.512-0.196-0.708-0.001l-0.707,0.707 c-0.195,0.195-0.195,0.512,0.001,0.708l1.414,1.414l-1.411,1.411c-0.195,0.195-0.195,0.512,0,0.707l0.707,0.707 c0.196,0.195,0.512,0.196,0.707,0l1.411-1.41l1.421,1.421c0.196,0.196,0.513,0.196,0.708,0.001l0.707-0.707 c0.195-0.195,0.195-0.513,0-0.708L307.416,395.993z M306,388c-4.418,0-8,3.582-8,8s3.582,8,8,8c4.419,0,8-3.582,8-8 C314,391.582,310.419,388,306,388z M306,402.499c-3.59,0-6.5-2.91-6.5-6.5c0-3.59,2.91-6.5,6.5-6.5s6.5,2.91,6.5,6.5 C312.5,399.589,309.59,402.499,306,402.499z"
-      }), " ")), /*#__PURE__*/_react.default.createElement(_index.default, {
+      }), " ")), _react.default.createElement(_index.default, {
         images: this.props.images
-      }), /*#__PURE__*/_react.default.createElement("div", {
+      }), _react.default.createElement("div", {
         className: "quickview__main"
-      }, /*#__PURE__*/_react.default.createElement("h1", {
+      }, _react.default.createElement("h1", {
         className: "quckview__name"
-      }, this.state.name), /*#__PURE__*/_react.default.createElement("h2", {
+      }, this.state.name), _react.default.createElement("h2", {
         className: "quickivew__sku"
-      }, "C\xF3digo: ", this.state.sku), !this.props.availabled || /*#__PURE__*/_react.default.createElement(_index2.default, {
+      }, "C\xF3digo: ", this.state.sku), !this.props.availabled || _react.default.createElement(_index2.default, {
         price: this.props.price,
         offer: this.props.offer,
         payment: this.props.payment
-      }), variants, !this.props.availabled || /*#__PURE__*/_react.default.createElement("div", {
+      }), variants, !this.props.availabled || _react.default.createElement("div", {
         className: "quickview__actions"
-      }, /*#__PURE__*/_react.default.createElement("div", {
+      }, _react.default.createElement("div", {
         className: "quickview__quantity"
-      }, /*#__PURE__*/_react.default.createElement("button", {
+      }, _react.default.createElement("button", {
         onClick: this.less.bind(this),
         type: "button",
         className: "qtds__button qtds__button--less"
-      }, "-"), /*#__PURE__*/_react.default.createElement("input", {
+      }, "-"), _react.default.createElement("input", {
         disabled: !this.props.saleable,
         type: "number",
         className: "quickview__qtd",
@@ -34925,50 +34909,50 @@ var quickview = /*#__PURE__*/function (_Component) {
         onChange: function onChange(e) {
           _this4.updateInputQtd(e);
         }
-      }), /*#__PURE__*/_react.default.createElement("button", {
+      }), _react.default.createElement("button", {
         onClick: this.more.bind(this),
         type: "button",
         className: "qtds__button qtds__button--more"
-      }, "+")), /*#__PURE__*/_react.default.createElement("button", {
+      }, "+")), _react.default.createElement("button", {
         disabled: !this.props.saleable,
         className: "quickview__button--addcart",
         onClick: function onClick(e) {
           _this4.buy(e);
         }
-      }, "Comprar"), /*#__PURE__*/_react.default.createElement("a", {
+      }, "Comprar"), _react.default.createElement("a", {
         href: this.state.url,
         className: "quickview__link quickview__link--more"
-      }, "Ver mais detalhes")), !this.props.isError.error || /*#__PURE__*/_react.default.createElement("div", {
+      }, "Ver mais detalhes")), !this.props.isError.error || _react.default.createElement("div", {
         className: "quickview__error"
-      }, this.props.isError.msg), this.props.availabled || /*#__PURE__*/_react.default.createElement("div", {
+      }, this.props.isError.msg), this.props.availabled || _react.default.createElement("div", {
         className: "quickview__unavailable"
-      }, "No momento este produto est\xE1 indispon\xEDvel."))), !this.props.isFinish || /*#__PURE__*/_react.default.createElement("div", {
+      }, "No momento este produto est\xE1 indispon\xEDvel."))), !this.props.isFinish || _react.default.createElement("div", {
         className: "quickview__container quickview__finish"
-      }, /*#__PURE__*/_react.default.createElement("button", {
+      }, _react.default.createElement("button", {
         onClick: function onClick(event) {
           _this4.close(event);
         },
         className: "quickview__button quickview__button--close"
-      }, /*#__PURE__*/_react.default.createElement("svg", {
+      }, _react.default.createElement("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 100 100"
-      }, /*#__PURE__*/_react.default.createElement("title", null, "close"), /*#__PURE__*/_react.default.createElement("g", {
+      }, _react.default.createElement("title", null, "close"), _react.default.createElement("g", {
         id: "Camada_2",
         "data-name": "Camada 2"
-      }, /*#__PURE__*/_react.default.createElement("g", {
+      }, _react.default.createElement("g", {
         id: "Layer_1",
         "data-name": "Layer 1"
-      }, /*#__PURE__*/_react.default.createElement("path", {
+      }, _react.default.createElement("path", {
         d: "M75.19,50,98.68,26.51a4.51,4.51,0,0,0,0-6.38L79.87,1.32a4.51,4.51,0,0,0-6.38,0L50,24.81,26.51,1.32a4.51,4.51,0,0,0-6.38,0L1.32,20.13a4.51,4.51,0,0,0,0,6.38L24.81,50,1.32,73.49a4.51,4.51,0,0,0,0,6.38L20.13,98.68a4.51,4.51,0,0,0,6.38,0L50,75.19,73.49,98.68a4.51,4.51,0,0,0,6.38,0L98.68,79.87a4.51,4.51,0,0,0,0-6.38Z"
-      }))))), /*#__PURE__*/_react.default.createElement("div", {
+      }))))), _react.default.createElement("div", {
         className: "quckview__actions"
-      }, /*#__PURE__*/_react.default.createElement("button", {
+      }, _react.default.createElement("button", {
         onClick: function onClick(event) {
           _this4.close(event);
         },
         className: "quickview__button quickview__button--continue",
         type: "button"
-      }, "Continuar Comprando"), /*#__PURE__*/_react.default.createElement("a", {
+      }, "Continuar Comprando"), _react.default.createElement("a", {
         className: "quickview__button quickview__button--finish",
         href: '/loja/carrinho.php?loja=' + this.state.store + '&transID=' + this.state.hash + '&hash=' + this.state.hash
       }, "Finalizar Compra"))));
@@ -35061,13 +35045,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -35075,15 +35055,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var remove = /*#__PURE__*/function (_Component) {
+var remove =
+/*#__PURE__*/
+function (_Component) {
   _inherits(remove, _Component);
-
-  var _super = _createSuper(remove);
 
   function remove() {
     _classCallCheck(this, remove);
 
-    return _super.apply(this, arguments);
+    return _possibleConstructorReturn(this, _getPrototypeOf(remove).apply(this, arguments));
   }
 
   _createClass(remove, [{
@@ -35104,7 +35084,7 @@ var remove = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this = this;
 
-      return /*#__PURE__*/_react.default.createElement("button", {
+      return _react.default.createElement("button", {
         className: "minicart__delete",
         type: "button",
         onClick: function onClick(e) {
@@ -35169,13 +35149,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -35183,17 +35159,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var minicart = /*#__PURE__*/function (_Component) {
+var minicart =
+/*#__PURE__*/
+function (_Component) {
   _inherits(minicart, _Component);
-
-  var _super = _createSuper(minicart);
 
   function minicart(props) {
     var _this;
 
     _classCallCheck(this, minicart);
 
-    _this = _super.call(this, props);
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(minicart).call(this, props));
     _this.state = {
       open: false
     };
@@ -35244,7 +35220,7 @@ var minicart = /*#__PURE__*/function (_Component) {
       var total = '0,00';
 
       if (!parseInt(minicart.amount)) {
-        main = /*#__PURE__*/_react.default.createElement("div", {
+        main = _react.default.createElement("div", {
           className: "minicart__empty"
         }, "Seu carrinho est\xE1 vazio.");
       } else {
@@ -35261,7 +35237,7 @@ var minicart = /*#__PURE__*/function (_Component) {
           currency: 'BRL'
         }).format(total);
         total = total.replace('R$', '');
-        main = /*#__PURE__*/_react.default.createElement("ul", {
+        main = _react.default.createElement("ul", {
           className: "minicart__list"
         }, minicart.products.map(function (item, key) {
           var name = item.product_name;
@@ -35272,7 +35248,7 @@ var minicart = /*#__PURE__*/function (_Component) {
           var imageHttp = item.product_image.http.replace('http:', '');
           var src = imageHttp.substr(0, lastSlash) + '90_' + imageHttp.substr(lastSlash);
 
-          var image = /*#__PURE__*/_react.default.createElement("img", {
+          var image = _react.default.createElement("img", {
             src: src,
             alt: name
           });
@@ -35282,39 +35258,39 @@ var minicart = /*#__PURE__*/function (_Component) {
             currency: 'BRL'
           }).format(item.price).replace('R$', '');
           var url = item.product_url.http.replace('http:', '');
-          return /*#__PURE__*/_react.default.createElement("li", {
+          return _react.default.createElement("li", {
             key: key,
             className: "minicart__item"
-          }, /*#__PURE__*/_react.default.createElement("a", {
+          }, _react.default.createElement("a", {
             className: "minicart__link",
             href: url
-          }, /*#__PURE__*/_react.default.createElement("figure", {
+          }, _react.default.createElement("figure", {
             className: "minicart__image"
-          }, image), /*#__PURE__*/_react.default.createElement("span", {
+          }, image), _react.default.createElement("span", {
             className: "minicart__info"
-          }, /*#__PURE__*/_react.default.createElement("h2", {
+          }, _react.default.createElement("h2", {
             className: "minicart__name"
-          }, name), /*#__PURE__*/_react.default.createElement("span", {
+          }, name), _react.default.createElement("span", {
             className: "minicart__details"
-          }, /*#__PURE__*/_react.default.createElement("span", {
+          }, _react.default.createElement("span", {
             className: "minicart__price"
-          }, "R$ ", price), /*#__PURE__*/_react.default.createElement("span", {
+          }, "R$ ", price), _react.default.createElement("span", {
             className: "minicart__qty"
-          }, "Quantidade: ", item.quantity)), /*#__PURE__*/_react.default.createElement(_index2.default, {
+          }, "Quantidade: ", item.quantity)), _react.default.createElement(_index2.default, {
             id: item.product_id,
             variant: parseInt(item.variant_id),
             session: _this3.props.session
           }))));
         }));
-        footer = /*#__PURE__*/_react.default.createElement("footer", {
+        footer = _react.default.createElement("footer", {
           className: "minicart__footer"
-        }, /*#__PURE__*/_react.default.createElement("div", {
+        }, _react.default.createElement("div", {
           className: "minicart__total"
-        }, /*#__PURE__*/_react.default.createElement("span", {
+        }, _react.default.createElement("span", {
           className: "minicart__total-label"
-        }, "Valor total"), /*#__PURE__*/_react.default.createElement("span", {
+        }, "Valor total"), _react.default.createElement("span", {
           className: "minicart__total-price"
-        }, "R$ ", total)), /*#__PURE__*/_react.default.createElement("a", {
+        }, "R$ ", total)), _react.default.createElement("a", {
           href: '/loja/carrinho.php?loja=' + this.props.id,
           className: "minicart__finish",
           onClick: function onClick() {
@@ -35323,27 +35299,27 @@ var minicart = /*#__PURE__*/function (_Component) {
         }, "Finalizar Compra"));
       }
 
-      return /*#__PURE__*/_react.default.createElement("section", {
+      return _react.default.createElement("section", {
         className: this.state.open ? 'minicart minicart--actived' : 'minicart',
         onClick: function onClick(e) {
           return _this3.close(e);
         }
-      }, /*#__PURE__*/_react.default.createElement("div", {
+      }, _react.default.createElement("div", {
         className: "minicart__container"
-      }, /*#__PURE__*/_react.default.createElement("header", {
+      }, _react.default.createElement("header", {
         className: "minicart__header"
-      }, /*#__PURE__*/_react.default.createElement("button", {
+      }, _react.default.createElement("button", {
         type: "button",
         onClick: function onClick(e) {
           return _this3.close(e);
         },
         className: "minicart__close"
-      }, /*#__PURE__*/_react.default.createElement("i", {
+      }, _react.default.createElement("i", {
         className: "fa fa-times",
         "aria-hidden": "true"
-      })), /*#__PURE__*/_react.default.createElement("h1", {
+      })), _react.default.createElement("h1", {
         className: "minicart__title"
-      }, "Meu Carrinho")), /*#__PURE__*/_react.default.createElement("div", {
+      }, "Meu Carrinho")), _react.default.createElement("div", {
         className: "minicart__main"
       }, main), footer));
     }
@@ -35424,9 +35400,9 @@ if (_config.default.quickview.actived) {
   });
 
   if (rootQuickview) {
-    _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
+    _reactDom.default.render(_react.default.createElement(_reactRedux.Provider, {
       store: store
-    }, /*#__PURE__*/_react.default.createElement(_index2.default, null)), rootQuickview);
+    }, _react.default.createElement(_index2.default, null)), rootQuickview);
   }
 } else {
   buttons.forEach(function (item) {
@@ -35439,9 +35415,9 @@ if (_config.default.minicart.actived) {
   var rootMinicart = document.querySelector('[data-minicart]');
 
   if (rootMinicart) {
-    _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
+    _reactDom.default.render(_react.default.createElement(_reactRedux.Provider, {
       store: store
-    }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+    }, _react.default.createElement(_index3.default, {
       id: rootMinicart.getAttribute('data-minicart')
     })), rootMinicart);
   }
@@ -35511,7 +35487,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62696" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50298" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
