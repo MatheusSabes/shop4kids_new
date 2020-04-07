@@ -1,54 +1,57 @@
-$button 
-    display: flex 
-    justify-content: center 
+$button
+    display: flex
+    justify-content: center
     align-items: center
     min-width: 45px
-    height: 45px 
-    border: 0 
-
+    height: 45px
+    border: 0
     font-size: 14px
     line-height: 1.2
     background: color
     color: #fff
     font-weight: 700
-    
-button, .button, button.clear
-    @extends $button
 
-.button 
-    &__icon 
+button, .button, button.clear
+    @extend $button
+
+.button
+    &__icon
         font-size: 20px
 
-.button 
+.button
     &__filter
-        position: fixed 
+        position: fixed
         bottom: 20px
-        left: 20px 
+        left: 20px
+        height: 50px
+        width: 50px
         z-index: 99
         border-radius: 50%
-        transition: all .2s ease-in-out
-        opacity: 1 
+        transition: all 0.2s ease-in-out
+        opacity: 1
         visibility: visible
+        z-index: 999
+
         @media screen and (min-width: 993px)
             display: none
 
-    &__mask 
-        position: fixed 
-        top: 0 
-        left: 0 
+    &__mask
+        position: fixed
+        top: 0
+        left: 0
         z-index: 200
-        width: 100% 
-        height: 100% 
-        background: rgba(0,0,0,.5)
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.5)
 
     &__close
-        position: fixed 
-        left: 100% 
+        position: fixed
+        left: 100%
         top: 0
         width: 45px
         height: 45px
         font-size: 25px
-        background: none 
+        background: none
         color: #000
 
     &--menu
@@ -57,11 +60,11 @@ button, .button, button.clear
         svg
             fill: #419ecf
 
-@media (min-width: 992px) 
+@media (min-width: 992px)
     .button
-        cursor          : pointer
-        cursor          : hand
+        cursor: pointer
+        cursor: hand
 
-        &--filter 
-            visibility: hidden 
+        &--filter
+            visibility: hidden
             opacity: 0
