@@ -13,13 +13,3 @@ function scrollFunction() {
 
 /* Filter Mobile */
 
-if (window.matchMedia("(max-width:993px)").matches) {
-    var buttonFilter = document.querySelector('.button__filter')
-
-    if (buttonFilter) {
-        jQuery(buttonFilter).click(function (e) {
-            e.preventDefault();
-            $(this).parent().find('.page-catalog__filters').toggleClass('showFilter')
-        });
-    }
-}

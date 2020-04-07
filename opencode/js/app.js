@@ -1,24 +1,18 @@
 /* Filter Mobile */
-if (window.matchMedia("(max-width:993px)").matches) {
-    var buttonFilter = document.querySelector('.button__filter'),
-        fecharFiltro = document.querySelector('.fechar-filtros')
 
-    if (fecharFiltro) {
-        jQuery(fecharFiltro).click(function (e) {
 
-            e.preventDefault();
-            $(this).parents('.showFilter').toggleClass('showFilter')
-        });
-    }
+if ((jQuery('.page-catalog').length > 0) || (jQuery('.page-search').length > 0)) {
 
-    if (buttonFilter) {
-        jQuery(buttonFilter).click(function (e) {
+    jQuery(".button__filter").click(function () {
+        jQuery(".page-catalog__left").addClass("showFilter");
+    });
 
-            e.preventDefault();
-            $(this).parent().find('.page-catalog__filters').toggleClass('showFilter')
-        });
-    }
+    jQuery(".fechar-filtros").click(function () {
+        jQuery(".page-catalog__left").removeClass("showFilter");
+    });
+    
 }
+
 jQuery('document').ready(function ($) {
     function pad(d) {
         return (d < 10) ? '0' + d.toString() : d.toString();
@@ -160,6 +154,7 @@ if (window.matchMedia("(max-width:991px)").matches) {
         document.querySelector('.cart__dropdown').classList.add('show')
     })
 }
+ 
 
 
 window.onscroll = function () { scrollFunction() };
@@ -175,18 +170,7 @@ function scrollFunction() {
 
 /* Filter Mobile */
 
-if (window.matchMedia("(max-width:993px)").matches) {
-    var buttonFilter = document.querySelector('.button__filter')
 
-    if (buttonFilter) {
-        jQuery(buttonFilter).click(function (e) {
-            e.preventDefault();
-            $(this).parent().find('.page-catalog__filters').toggleClass('showFilter')
-        });
-    }
-}
-
- 
 
 if (jQuery('.showcase__list[data-carousel=true]')) {
     jQuery('.showcase__list[data-carousel=true]').each(function () {
@@ -523,6 +507,8 @@ if ($('.page-home__mobile--list')) {
     });
 }
 
+ 
+
 
 
 var button = $('#bt-submit-comments');
@@ -536,8 +522,6 @@ if(button) {
     });
 }
 
-
- 
 
 
 // function FakeSelect() {
@@ -798,18 +782,7 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    if (window.matchMedia("(max-width:993px)").matches) {
-        var buttonFilter = document.querySelector('.button__filter')
 
-        if (buttonFilter) {
-            jQuery(buttonFilter).click(function (e) {
-                console.log('Entrei no botao');
-
-                e.preventDefault();
-                $(this).parent().find('.page-catalog__filters').toggleClass('showFilter')
-            });
-        }
-    }
 });
 
 

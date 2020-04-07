@@ -1,21 +1,14 @@
 /* Filter Mobile */
-if (window.matchMedia("(max-width:993px)").matches) {
-    var buttonFilter = document.querySelector('.button__filter'),
-        fecharFiltro = document.querySelector('.fechar-filtros')
 
-    if (fecharFiltro) {
-        jQuery(fecharFiltro).click(function (e) {
 
-            e.preventDefault();
-            $(this).parents('.showFilter').toggleClass('showFilter')
-        });
-    }
+if ((jQuery('.page-catalog').length > 0) || (jQuery('.page-search').length > 0)) {
 
-    if (buttonFilter) {
-        jQuery(buttonFilter).click(function (e) {
+    jQuery(".button__filter").click(function () {
+        jQuery(".page-catalog__left").addClass("showFilter");
+    });
 
-            e.preventDefault();
-            $(this).parent().find('.page-catalog__filters').toggleClass('showFilter')
-        });
-    }
+    jQuery(".fechar-filtros").click(function () {
+        jQuery(".page-catalog__left").removeClass("showFilter");
+    });
+    
 }
