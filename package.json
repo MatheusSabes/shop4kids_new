@@ -11,7 +11,7 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-stylus": "^2.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "npm-run-parallel": "^0.6.0",
     "parallel": "^1.2.0",
     "parcel-bundler": "^1.12.4",
